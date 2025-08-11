@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fallinorg</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="assets/apple-touch-icon-167x167.png">
+     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero" class="section-black">
+        <div class="container mb-5" >
+            <div class="row justify-content-center text-center mt-4">
+                    <div class="col-lg-8 mt-5">
+                        <img src="assets/logo.png" alt="Logo" class="img-fluid mb-2 mt-5" style="width: 180px; height: 180px;">
+                        <h2 class="fw-bold mb-4">Fallinorg</h1>
+                        <h1 class="display-5 fw-bold">Clean up your Mac in one click.</h1>
+                        <p class="fs-1 mb-5">On-device AI to privately understand and organize your files into the right place.</p> 
+                    
+                        <a type="button" class="btn btn-outline-light btn-lg mb-3" href="#buyanddownload">
+                                <i class="bi bi-apple me-2"></i>Download Pre-Sale
+                        </a>
+                    </div>
+            </div>
+            <div class="row justify-content-center text-center mt-4">
+                    <div class="col-lg-10">
+                        <video src="assets/demo.mp4" controls preload="metadata" class="demo-video mt-4" onloadedmetadata="this.currentTime = 2"></video>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section-black">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <h3 class="lead fw-bold mb-4 ">Features</h3>
+                    <h2 class="display-5 fw-bold">A powerful tool built to help you focus.</h2>
+                    <!--<p class="lead mb-1">The content of the files get analyzed with Sentence Transformers AI to create a folder structure that is easy to navigate.</p>-->
+                    <!--fw-bold-->
+                </div>
+            </div>
+            
+            <!-- First row: 2 features -->
+            <div class="row justify-content-center mb-1">
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="feature-card">
+                        <h1><i class="bi bi-file-lock-fill"></i></h1>
+                        <h4 class="mb-3">Local, Private and Secure</h4>
+                        <p class="lead">All file processing happens right on your Mac, so your data stays safe and never leaves your device.</p> 
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="feature-card">
+                        <h1><i class="bi bi-wifi-off"></i></h1>
+                        <h4 class="mb-3">Offline</h4>
+                        <p class="lead">No internet connection? No problem. Fallinorg works fully offline, keeping your files organized anytime, anywhere.</p>
+                   </div>
+                </div>
+            </div>
+            
+            <!-- Second row: 1 feature centered -->
+            <div class="row justify-content-center mb-1">
+                <div class="col-lg-8 col-md-8 mb-4">
+                    <div class="feature-card">
+                        <h1><i class="bi bi-stack"></i></h1>
+                        <h4 class="mb-3">Multiple File Support</h4>
+                        <p class="lead">Organize your text and PDF documents in english easily. Support for more file types is coming soon.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Third row: 2 features -->
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-4">
+                    <div class="feature-card">
+                        <h1  ><i class="bi bi-sliders2"></i></h1>
+                        <h4 class="mb-3">Your folders, your rules</h4>
+                        <p class="lead">Customize where your files go — you’re always in control of folder locations.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="feature-card">
+                        <h1><i class="bi bi-cpu"></i></h1>
+                        <h4 class="mb-3">Made for Apple Silicon</h4>
+                        <p class="lead">Optimized for M‑series Macs for quick suggestions and smooth moving.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy and Download Section -->
+    <section id="buyanddownload" class="section-black">
+        <div class="container">
+            
+            <!-- Pricing Card -->
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8">
+                    <h3 class="lead fw-bold mb-4 text-center">Download</h3>
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="fs-2 fw-bold mb-2">Fallinorg Pre-Sale</h3>
+                            <div class="price-display">
+                                <span class="price">$ 9.49</span>
+                                <span class="price-period">USD one-time</span>
+                            </div>
+                            <p class="pricing-description fs-5">AI-powered file organization for your Mac. Organize your files with content analysis—all while keeping your data private and secure.</p>
+                        </div>
+                        
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Organize files with a single click</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Handle unlimited files, no restrictions</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Choose where your files are saved</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Supports English text and PDF files</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Complete privacy: all processing stays local</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Apple Silicon optimized</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Email support</span>
+                            </div>
+                        </div>
+                        
+                        <div class="download-section">
+ 
+                            <stripe-buy-button
+                                buy-button-id="buy_btn_1RtDVfKEp71Hht7CKBo0GpqC"
+                                publishable-key="pk_live_k02Gb7TJqSQIk27hKYHlSK7T"
+                                class="stripe-button">
+                            </stripe-buy-button>
+                                  
+                            <!-- Success message (hidden by default) -->
+                            <div id="payment-success" class="alert alert-success mt-3" style="display: none;">
+                                <h5>Payment Successful!</h5>
+                                <p>Check your email for the download link. It should arrive within 2-3 minutes.</p>
+                                <p class="small text-muted">Download links are unique and time-limited for security.</p>
+                            </div>
+                            <p class="download-note">Compatible with macOS 14.0+ (Apple Silicon)</p>
+                            <p class="download-note">Buyers receive free updates during pre-sale period.</p>
+                            <p class="download-note">30 day refund available.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section-black">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h3 class="lead fw-bold mb-4">Support</h3>
+                    <h2 class="display-8 fw-bold mb-4">Frequently Asked Questions</h2>
+                    <p class="lead">Here are answers to the most common questions about Fallinorg.</p>
+
+                    <div class="accordion accordion-flush" id="accordionFAQ" data-bs-theme="dark">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How does Fallinorg analyze my files?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    Fallinorg uses Sentence Transformers AI to understand your file content locally on your Mac. It then classifies, suggests and sorts files into meaningful folders based on their content.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Is my data private and secure?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    Absolutely. All processing happens on your device. Your files never leave your Mac, and no data is sent to any external servers.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    What file types are supported?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    Currently, Fallinorg supports plain text (.txt) and PDF (.pdf) files. More file types will be added soon.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Can I choose where files are organized?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    Yes, you have full control. You can select the destination folders and decide which files to move or keep.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Do I need internet to use Fallinorg?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    No, internet is not required. Fallinorg works completely offline with all AI processing happening locally.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Will it work on my Intel Mac?
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    Not yet. Fallinorg currently supports only Apple Silicon Macs. If you want to be notified when Intel support is available, please email us at fallinorg@proton.me.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                   How can I get a refund? 
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    Email us at  <a href="mailto:fallinorg@proton.me" class="text-light">fallinorg@proton.me</a> with ith your refund request and reason. We’ll be happy to assist you.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingEight">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                   Will I get updates after buying the pre-sale?
+                                </button>
+                            </h2>
+                            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    Yes, during the pre-sale period, you’ll receive all small updates we release—this includes bug fixes, performance improvements, and minor feature tweaks. These updates are free for all pre-sale buyers.
+
+                                    Once the pre-sale ends, we’ll begin developing larger features and major upgrades. These will be part of the full release, and pre-sale buyers will have the option to upgrade at a special discounted price.
+                                    
+                                    By joining early, you get to enjoy the app right away, help shape its development with your feedback, and secure early access at our lowest price.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="newsletter" class="section-dark">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+
+                    <h2 class="display-6 mb-1 fw-bold">Subscribe to our newsletter</h2>
+                    <p class="lead mb-4">Carefully curated E-Mails to keep you in the loop.</p>
+                     
+                     <form action="https://formspree.io/f/mrblyvnk" method="POST" class="newsletter-form">
+                         <div class="row justify-content-center">
+                             <div class="col-lg-6">
+                                 <div class="input-group mb-3">
+                                     <input type="email" name="email" class="form-control form-control-lg" placeholder="Enter your email address" required>
+                                     <button type="submit" class="btn btn-light btn-lg">Subscribe</button>
+                                 </div>
+                             </div>
+                         </div>
+                     </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+    <script>
+        // Email validation and download button functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailInput = document.getElementById('emailInput');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const invalidFeedback = document.querySelector('.invalid-feedback');
+            
+            // Email validation regex
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            function validateEmail() {
+                const email = emailInput.value.trim();
+                const isValid = emailRegex.test(email);
+                
+                if (email === '') {
+                    // Empty field - reset state
+                    emailInput.classList.remove('is-invalid');
+                    downloadBtn.disabled = true;
+                    invalidFeedback.style.display = 'none';
+                } else if (isValid) {
+                    // Valid email
+                    emailInput.classList.remove('is-invalid');
+                    downloadBtn.disabled = false;
+                    invalidFeedback.style.display = 'none';
+                } else {
+                    // Invalid email
+                    emailInput.classList.add('is-invalid');
+                    downloadBtn.disabled = true;
+                    invalidFeedback.style.display = 'block';
+                }
+            }
+            
+            // Real-time validation
+            emailInput.addEventListener('input', validateEmail);
+            emailInput.addEventListener('blur', validateEmail);
+            
+            // Download button click handler
+            downloadBtn.addEventListener('click', function() {
+                const email = emailInput.value.trim();
+                
+                if (emailRegex.test(email)) {
+                    // Here you would typically:
+                    // 1. Send email to your backend
+                    // 2. Trigger the actual download
+                    
+                    alert(`Thank you! Download link will be sent to ${email}`);
+                    
+                    // For now, just show a success message
+                    // In a real implementation, you would:
+                    // window.location.href = 'path/to/your/app.dmg';
+                } else {
+                    emailInput.classList.add('is-invalid');
+                    invalidFeedback.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

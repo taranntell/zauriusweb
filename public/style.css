@@ -1,0 +1,380 @@
+/* Custom CSS for Apple-inspired design */
+
+/* Global Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: white;
+}
+
+/* Navigation */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 400;
+    padding: 0.5rem 1rem !important;
+}
+
+/* Section Styles */
+.section-black {
+    background-color: #000000;
+    padding: 10px 0;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Hero section with gradient */
+#hero {
+    background: -webkit-radial-gradient(center top, ellipse, rgb(26, 26, 26) 0%, rgb(20, 20, 20) 30%, rgba(0, 0, 0, 1) 70%);
+    background: radial-gradient(ellipse at center top, rgb(26, 26, 26) 0%, rgb(20, 20, 20) 30%, rgba(0, 0, 0, 1) 70%);
+}
+
+#demo {
+    min-height: auto;
+    padding: 40px 0;
+}
+
+#buyanddownload {
+    min-height: auto;
+    padding: 80px 0 10px 0;
+}
+
+.section-dark {
+    background-color: #1B1B1B;
+    padding: 60px 0;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Typography */
+.display-3, .display-5 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-light:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline-light:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+}
+
+/* Features */
+.feature-card {
+    background-color: #1D1D1F;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: left;
+    /*border: 1px solid rgba(255, 255, 255, 0.1);*/
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    /*border-color: rgba(255, 255, 255, 0.2);*/
+}
+
+.feature-card h4 {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.feature-card p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section-black {
+        padding: 80px 0 60px 0;
+        min-height: auto;
+    }
+    
+    .section-dark {
+        padding: 40px 0;
+        min-height: auto;
+    }
+    
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    
+    .display-5 {
+        font-size: 2rem;
+    }
+    
+    .screenshot-container {
+        width: 80%;
+        max-width: 350px;
+        margin: 40px auto 0 auto;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Text colors for better contrast */
+.text-light-emphasis {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Screenshot with overlay effect */
+.screenshot-container {
+    position: relative;
+    width: 100%;
+
+    margin: 60px auto 0 auto;
+    text-align: center;
+}
+
+.screenshot-container img {
+    width: 100%;
+
+    height: auto;
+    display: block;
+    border-radius: 16px;
+}
+
+.screenshot-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 33.33%; /* 1/3 of the image */
+    /* Safari fallback with base64 gradient */
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjAlIiB5Mj0iMCUiPjxzdG9wIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC44IiBvZmZzZXQ9IjAlIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIiBvZmZzZXQ9IjEwMCUiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZykiLz48L3N2Zz4=');
+    /* Safari old webkit syntax */
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(100%, rgba(0, 0, 0, 0)));
+    /* Modern webkit syntax */
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    /* Firefox */
+    background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    /* Standard */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Demo video styling */
+.demo-video {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+}
+
+
+
+/* Minimal FAQ accordion styling */
+.accordion-item {
+    background-color: #000000;
+}
+
+.accordion-button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+}
+
+.accordion-button::after {
+    filter: invert(1);
+}
+
+.accordion-button:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: none;
+    filter: invert(1);
+}
+
+.accordion-body {
+    background-color: #000000;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Pricing Card Styles */
+.pricing-card {
+    /*background-color: #000000 !important */
+    background-color: #1D1D1F;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    padding: 40px !important;
+    text-align: center !important;
+    -webkit-transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pricing-card:hover {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.pricing-header {
+    margin-bottom: 30px;
+}
+
+.price-display {
+    margin: 20px 0;
+}
+
+.price {
+    font-size: 2rem !important;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+}
+
+.price-period {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 8px;
+    font-weight: 400;
+}
+
+.pricing-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.features-list {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.feature-item i {
+    color: #35C85B;
+    margin-right: 12px;
+    font-size: 1.1rem;
+    min-width: 20px;
+}
+
+.feature-item span {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.download-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+}
+
+.email-input-group {
+    margin-bottom: 0;
+}
+
+.email-input {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: #ffffff;
+    padding: 12px 16px;
+    font-size: 1rem;
+}
+
+.email-input:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    outline: none;
+}
+
+.email-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.email-input.is-invalid {
+    border-color: #dc3545;
+}
+
+.invalid-feedback {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 5px;
+}
+
+#downloadBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#downloadBtn:disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.download-note {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+/* Stripe button styling */
+.stripe-button {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Responsive pricing card */
+@media (max-width: 768px) {
+    .pricing-card {
+        padding: 30px 20px;
+        margin: 0 15px;
+    }
+    
+    .price {
+        font-size: 2.5rem;
+    }
+}
+
