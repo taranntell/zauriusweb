@@ -28,7 +28,7 @@
                         <img src="assets/logo.png" alt="Logo" class="img-fluid mb-2 mt-5" style="width: 180px; height: 180px;">
                         <h2 class="fw-bold mb-4">Fallinorg</h1>
                         <h1 class="display-5 fw-bold">Clean up your Mac in one click.</h1>
-                        <p class="fs-1 mb-5">On-device AI to privately understand and organize your files into the right place.</p> 
+                        <p class="fs-1 mb-5">Organize your files with content understanding <br />— offline, private and lightning-fast.</p> 
                     
                         <a type="button" class="btn btn-outline-light btn-lg mb-3" href="#buyanddownload">
                                 <i class="bi bi-apple me-2"></i>Download Pre-Sale
@@ -154,22 +154,7 @@
                         </div>
                         
                         <div class="download-section">
- 
-                            <stripe-buy-button
-                                buy-button-id="buy_btn_1RtDVfKEp71Hht7CKBo0GpqC"
-                                publishable-key="pk_live_k02Gb7TJqSQIk27hKYHlSK7T"
-                                class="stripe-button">
-                            </stripe-buy-button>
-                                  
-                            <!-- Success message (hidden by default) -->
-                            <div id="payment-success" class="alert alert-success mt-3" style="display: none;">
-                                <h5>Payment Successful!</h5>
-                                <p>Check your email for the download link. It should arrive within 2-3 minutes.</p>
-                                <p class="small text-muted">Download links are unique and time-limited for security.</p>
-                            </div>
-                            <p class="download-note">Compatible with macOS 14.0+ (Apple Silicon)</p>
-                            <p class="download-note">Buyers receive free updates during pre-sale period.</p>
-                            <p class="download-note">30 day refund available.</p>
+
                         </div>
                     </div>
                 </div>
@@ -359,25 +344,6 @@
             emailInput.addEventListener('input', validateEmail);
             emailInput.addEventListener('blur', validateEmail);
             
-            // Download button click handler
-            downloadBtn.addEventListener('click', function() {
-                const email = emailInput.value.trim();
-                
-                if (emailRegex.test(email)) {
-                    // Here you would typically:
-                    // 1. Send email to your backend
-                    // 2. Trigger the actual download
-                    
-                    alert(`Thank you! Download link will be sent to ${email}`);
-                    
-                    // For now, just show a success message
-                    // In a real implementation, you would:
-                    // window.location.href = 'path/to/your/app.dmg';
-                } else {
-                    emailInput.classList.add('is-invalid');
-                    invalidFeedback.style.display = 'block';
-                }
-            });
         });
     </script>
 </body>
