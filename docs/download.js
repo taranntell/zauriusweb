@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   
     if (!sessionId) {
       statusEl.textContent = "No session ID provided.";
+      const loadingSpinner = document.getElementById("loading-spinner");
+      if (loadingSpinner) {
+        loadingSpinner.style.display = "none";
+      }
       return;
     }
   
@@ -17,6 +21,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (!res.ok) {
         const errorText = await res.text();
         statusEl.textContent = `Error verifying payment: ${errorText}`;
+        const loadingSpinner = document.getElementById("loading-spinner");
+        if (loadingSpinner) {
+          loadingSpinner.style.display = "none";
+        }
         return;
       }
   
@@ -30,12 +38,28 @@ document.addEventListener("DOMContentLoaded", async () => {
       downloadLink.download = "Fallinorg_v1.0.0-beta.zip";
       downloadLink.style.display = "inline-block";
       downloadLink.textContent = "Download Fallinorg";
-  
+      
+            // Hide loading spinner
+      const loadingSpinner = document.getElementById("loading-spinner");
+      if (loadingSpinner) {
+        loadingSpinner.style.display = "none";
+      }
+
       // Optional: Auto-trigger download
       downloadLink.click();
+      
+      // Show home link after download starts
+      const homeLink = document.getElementById("home-link");
+      if (homeLink) {
+        homeLink.style.display = "block";
+      }
   
     } catch (err) {
       console.error(err);
       statusEl.textContent = "Error verifying payment.";
+      const loadingSpinner = document.getElementById("loading-spinner");
+      if (loadingSpinner) {
+        loadingSpinner.style.display = "none";
+      }
     }
   });

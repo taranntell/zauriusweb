@@ -131,6 +131,148 @@ body {
         max-width: 350px;
         margin: 40px auto 0 auto;
     }
+    
+    /* Hero section mobile adjustments */
+    #hero img[src="assets/logo.png"] {
+        width: 150px !important;
+        height: 150px !important;
+    }
+    
+    #hero .mt-5 {
+        margin-top: 1rem !important;
+    }
+    
+    #hero .display-5 {
+        font-size: 1.75rem !important;
+    }
+    
+    #hero .fs-2 {
+        font-size: 1.25rem !important;
+    }
+    
+    /* Reduce top and bottom padding for hero section on mobile */
+    #hero {
+        padding-top: 40px !important;
+        padding-bottom: 20px !important;
+    }
+    
+    /* Reduce pre-sale button size on mobile */
+    .btn-presale {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    /* Features section mobile adjustments */
+    #features {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+    
+    /* Consistent typography for features section */
+    #features .lead.fw-bold {
+        font-size: 0.9rem !important;
+    }
+    
+    #features .display-5 {
+        font-size: 1.5rem !important;
+    }
+    
+    #features .fs-4 {
+        font-size: 1rem !important;
+    }
+    
+    #features .feature-card h4 {
+        font-size: 1.1rem !important;
+    }
+    
+    #features .feature-card p {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Fix feature card alignment overlap */
+    #features .col-lg-4,
+    #features .col-md-4 {
+        margin-bottom: 1.2rem !important;
+    }
+    
+    #features .feature-card {
+        padding: 20px !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    /* Buy and download section mobile adjustments */
+    #buyanddownload {
+        padding-top: 20px !important;
+    }
+    
+    #buyanddownload .lead.fw-bold {
+        font-size: 0.9rem !important;
+    }
+    
+    #buyanddownload .fs-2 {
+        font-size: 1.3rem !important;
+    }
+    
+    #buyanddownload .fs-5 {
+        font-size: 1rem !important;
+    }
+    
+    #buyanddownload .pricing-card {
+        padding: 30px 20px !important;
+    }
+    
+    #buyanddownload .price {
+        font-size: 1.7rem !important;
+    }
+    
+    #buyanddownload .price-period {
+        font-size: 0.95rem !important;
+    }
+    
+    #buyanddownload .feature-item {
+        font-size: 0.9rem !important;
+    }
+    
+    /* FAQ section mobile adjustments */
+    #faq .lead.fw-bold {
+        font-size: 0.9rem !important;
+    }
+    
+    #faq .display-8 {
+        font-size: 1.3rem !important;
+    }
+    
+    #faq .lead {
+        font-size: 1rem !important;
+    }
+    
+    #faq .accordion-button {
+        font-size: 0.95rem !important;
+    }
+    
+    #faq .accordion-body {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Newsletter section mobile adjustments */
+    #newsletter .display-6 {
+        font-size: 1.3rem !important;
+    }
+    
+    #newsletter .lead {
+        font-size: 1rem !important;
+    }
+    
+    #newsletter .form-control {
+        font-size: 0.9rem !important;
+    }
+    
+    #newsletter .btn {
+        font-size: 0.9rem !important;
+    }
 }
 
 /* Smooth scrolling */
@@ -358,6 +500,38 @@ html {
     color: rgba(255, 255, 255, 0.6);
     margin-top: 15px;
     margin-bottom: 0;
+}
+
+/* Custom Pre-Sale button styling */
+.btn-presale {
+    background-color: #000000 !important;
+    background: #000000 !important;
+    border: none !important;
+    border-color: transparent !important;
+    color: #ffffff !important;
+    border-radius: 50px !important;
+    -webkit-border-radius: 50px !important;
+    padding-top: 0.7rem !important;
+    padding-bottom: 0.7rem !important;
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+    transition: all 0.3s ease !important;
+    -webkit-transition: all 0.3s ease !important;
+    text-decoration: none !important;
+}
+
+.btn-presale:hover,
+.btn-presale:focus,
+.btn-presale:active {
+    background-color: #1a1a1a !important;
+    background: #1a1a1a !important;
+    border-color: transparent !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Stripe button styling */
