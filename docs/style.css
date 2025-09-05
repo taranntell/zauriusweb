@@ -27,8 +27,8 @@ body {
 /* Section Styles */
 .section-black {
     background-color: #000000;
-    padding: 10px 0;
-    min-height: 90vh;
+    padding: 80px 0;
+    min-height: relative;
     display: flex;
     align-items: center;
     position: relative;
@@ -47,15 +47,24 @@ body {
 
 #buyanddownload {
     min-height: auto;
-    padding: 80px 0 10px 0;
+}
+
+.section-darker {
+    background-color: #1D1D1F;
+    padding: 80px 0;
+    min-height: relative;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .section-dark {
     background-color: #1B1B1B;
-    padding: 60px 0;
-    min-height: auto;
+    padding: 80px 0;
+    min-height: relative;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 /* Typography */
@@ -109,12 +118,17 @@ body {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .section-black {
-        padding: 80px 0 60px 0;
+        padding: 60px 0;
+        min-height: auto;
+    }
+    
+    .section-darker {
+        padding: 60px 0;
         min-height: auto;
     }
     
     .section-dark {
-        padding: 40px 0;
+        padding: 60px 0;
         min-height: auto;
     }
     
@@ -150,11 +164,6 @@ body {
         font-size: 1.25rem !important;
     }
     
-    /* Reduce top and bottom padding for hero section on mobile */
-    #hero {
-        padding-top: 40px !important;
-        padding-bottom: 20px !important;
-    }
     
     /* Reduce pre-sale button size on mobile */
     .btn-presale {
@@ -165,11 +174,6 @@ body {
         font-size: 0.9rem !important;
     }
     
-    /* Features section mobile adjustments */
-    #features {
-        padding-top: 20px !important;
-        padding-bottom: 20px !important;
-    }
     
     /* Consistent typography for features section */
     #features .lead.fw-bold {
@@ -203,10 +207,6 @@ body {
         margin-bottom: 0.5rem !important;
     }
     
-    /* Buy and download section mobile adjustments */
-    #buyanddownload {
-        padding-top: 20px !important;
-    }
     
     #buyanddownload .lead.fw-bold {
         font-size: 0.9rem !important;
@@ -273,6 +273,55 @@ body {
     #newsletter .btn {
         font-size: 0.9rem !important;
     }
+    
+    /* What's New section mobile adjustments */
+    .stacking-cards {
+        height: auto;
+        padding: 10px 0;
+        margin: 0 15px;
+    }
+
+
+    
+    .whatsnew-card {
+        padding: 20px;
+    }
+    
+    .whatsnew-card.main-card {
+        padding: 25px 20px;
+    }
+
+    
+    .card-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .whatsnew-icon {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    
+    .version-title {
+        font-size: 1.3rem !important;
+    }
+    
+    .release-date {
+        font-size: 0.8rem !important;
+    }
+    
+    .feature-list li {
+        font-size: 0.9rem !important;
+        margin-bottom: 8px;
+        line-height: 1.4;
+    }
+    
+    /* Hide background cards on mobile for cleaner look */
+    .whatsnew-card.bg-card-1,
+    .whatsnew-card.bg-card-2 {
+        display: none;
+    }
 }
 
 /* Smooth scrolling */
@@ -331,15 +380,13 @@ html {
     box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
 }
 
-
-
 /* Minimal FAQ accordion styling */
 .accordion-item {
-    background-color: #000000;
+    background-color: #1B1B1B;
 }
 
 .accordion-button {
-    background-color: #000000;
+    background-color: #1B1B1B;
     color: #ffffff;
     border: none;
 }
@@ -354,7 +401,7 @@ html {
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: #000000;
+    background-color: #1B1B1B;
     color: #ffffff;
 }
 
@@ -364,19 +411,18 @@ html {
 }
 
 .accordion-body {
-    background-color: #000000;
+    background-color: #1B1B1B;
     color: rgba(255, 255, 255, 0.9);
 }
 
 /* Pricing Card Styles */
 .pricing-card {
-    /*background-color: #000000 !important */
-    background-color: #1D1D1F;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background: linear-gradient(to bottom, #08040f 0%, #150d2e 35%, #5033b0 75%) !important;
+    /*border: 1px solid rgba(255, 255, 255, 0.1) !important; */
     -webkit-border-radius: 20px;
     border-radius: 20px;
     padding: 40px !important;
-    text-align: center !important;
+    text-align: left !important;
     -webkit-transition: transform 0.3s ease, border-color 0.3s ease;
     transition: transform 0.3s ease, border-color 0.3s ease;
     max-width: 500px !important;
@@ -389,7 +435,8 @@ html {
 .pricing-card:hover {
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
-    border-color: rgba(255, 255, 255, 0.2) !important;
+    /*border-color: rgba(255, 255, 255, 0.2) !important;*/
+    background: linear-gradient(to bottom, #0a0513 0%, #5033b0 75%) !important;
 }
 
 .pricing-header {
@@ -422,13 +469,13 @@ html {
 }
 
 .features-list {
-    text-align: left;
+    text-align: left !important;
     margin-bottom: 30px;
 }
 
 .feature-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 12px;
     color: rgba(255, 255, 255, 0.9);
 }
@@ -518,6 +565,9 @@ html {
     transition: all 0.3s ease !important;
     -webkit-transition: all 0.3s ease !important;
     text-decoration: none !important;
+    width: 80% !important;
+    display: block !important;
+    margin: 0 auto !important;
 }
 
 .btn-presale:hover,
@@ -538,6 +588,191 @@ html {
 .stripe-button {
     width: 100%;
     margin-top: 1rem;
+}
+
+/* Custom badge styling */
+.badge.text-bg-secondary {
+    background-color: #212121 !important;
+    color: white !important;
+    font-weight: normal !important;
+}
+
+/* Roadmap number circles */
+.roadmap-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: transparent;
+    color: white;
+    border: 2px solid #D0D0D0;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+/* Stacking container */
+.stacking-cards {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+    overflow: visible;        /* let the peeking borders show */
+    isolation: isolate;       /* predictable z-index stacking */
+    display: block;           /* container height grows with main card */
+}
+
+/* Main card: natural height */
+.whatsnew-card.main-card {
+    background-color: #1D1D1F;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    padding: 30px;
+    box-sizing: border-box;
+    position: relative;       /* in flow so height matches content */
+    z-index: 3;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.whatsnew-card.main-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Background cards: same height as main card, smaller width + offsets */
+.whatsnew-card.bg-card-1,
+.whatsnew-card.bg-card-2 {
+    position: absolute;
+    height: 100%;            /* match main card height dynamically */
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-color: #1D1D1F;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    padding: 30px;
+    pointer-events: none;
+}
+
+/* Stacking offsets and opacity */
+.bg-card-1 {
+    z-index: 2;
+    left: 3%;
+    right: 3%;
+    top: -5px;          /* peek from above */
+    bottom: auto;        /* let height shrink so it only shows above */
+    height: 100%;        /* shrink to fit the top peek */
+    opacity: 0.85;
+}
+
+.bg-card-2 {
+    z-index: 1;
+    left: 6%;
+    right: 6%;
+    top: -22px;
+    height: 100%;
+    opacity: 0.6;
+}
+
+/* Hide content inside background cards so only borders show */
+.bg-card-1 .card-header,
+.bg-card-1 .card-content,
+.bg-card-2 .card-header,
+.bg-card-2 .card-content {
+    display: none;
+}
+  
+/* center the smaller backgrounds visually (in case you used inset earlier) */
+.whatsnew-card { box-sizing: border-box; } /* keep */
+
+/* Typography (keep yours, removing the duplicate !important versions helps) */
+.card-header { 
+    margin-bottom: 20px; 
+    text-align: left; 
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.whatsnew-icon {
+    width: 100px !important;
+    height: 100px !important;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.header-content {
+    flex: 1;
+}
+
+.version-title { font-size: 1.5rem; font-weight: 600; color: #fff; margin-bottom: 5px; }
+.release-date  { font-size: .9rem; color: rgba(255,255,255,.6); margin-bottom: 0; }
+.card-content  { text-align: left; }
+
+/* Extra small mobile optimizations */
+@media (max-width: 576px) {
+    .stacking-cards { 
+        height: auto; 
+        margin: 0 10px;
+    }
+    
+    .whatsnew-card { 
+        padding: 20px 15px; 
+    }
+    
+    .whatsnew-card.main-card {
+        padding: 20px 15px;
+    }
+    
+    .whatsnew-icon { 
+        width: 80px !important; 
+        height: 80px !important; 
+    }
+    
+    .card-header { 
+        gap: 12px; 
+    }
+    
+    .version-title { 
+        font-size: 1.2rem !important; 
+    }
+    
+    .release-date { 
+        font-size: 0.8rem !important; 
+    }
+    
+    .feature-list li { 
+        font-size: 0.85rem !important; 
+        margin-bottom: 6px;
+        line-height: 1.3;
+    }
+    
+    /* Adjust section padding for very small screens */
+    #whatsnew.section-black {
+        padding: 40px 0;
+    }
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.feature-list li::before {
+    content: "•";
+    color: #714EF6;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
 }
 
 /* Responsive pricing card */
