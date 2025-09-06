@@ -5,6 +5,8 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Navigation */
@@ -55,26 +57,37 @@ body {
 
 /* Purple Pill Button */
 .btn-purple-pill {
+    background: #5033b0 !important; /* Safari fallback */
+    background: -webkit-linear-gradient(135deg, #5033b0 0%, #714EF6 100%) !important;
     background: linear-gradient(135deg, #5033b0 0%, #714EF6 100%) !important;
     border: none !important;
     color: #ffffff !important;
+    -webkit-border-radius: 50px !important;
     border-radius: 50px !important;
     padding: 0.15rem 1.5rem !important;
     font-weight: 500 !important;
     text-decoration: none !important;
+    -webkit-transition: all 0.3s ease !important;
     transition: all 0.3s ease !important;
     display: inline-block !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
 }
 
 .btn-purple-pill:hover {
+    background: #5a3bc4 !important; /* Safari fallback */
+    background: -webkit-linear-gradient(135deg, #5a3bc4 0%, #8a5ff5 100%) !important;
     background: linear-gradient(135deg, #5a3bc4 0%, #8a5ff5 100%) !important;
     color: #ffffff !important;
+    -webkit-transform: translateY(-2px) !important;
     transform: translateY(-2px) !important;
+    -webkit-box-shadow: 0 8px 25px rgba(80, 51, 176, 0.3) !important;
     box-shadow: 0 8px 25px rgba(80, 51, 176, 0.3) !important;
     text-decoration: none !important;
 }
 
 .btn-purple-pill:focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(80, 51, 176, 0.25) !important;
     box-shadow: 0 0 0 0.2rem rgba(80, 51, 176, 0.25) !important;
     color: #ffffff !important;
 }
@@ -178,6 +191,27 @@ body.has-navbar {
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 0;
     line-height: 1.6;
+}
+
+/* Small window adjustments (between mobile and desktop) */
+@media (max-width: 992px) and (min-width: 769px) {
+    .btn-presale {
+        padding-left: 2.5rem !important;
+        padding-right: 2.5rem !important;
+        width: auto !important;
+        max-width: 90% !important;
+    }
+}
+
+/* Very small window adjustments */
+@media (max-width: 480px) {
+    .btn-presale {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        font-size: 0.9rem !important;
+    }
 }
 
 /* Responsive adjustments */
@@ -419,11 +453,20 @@ body.has-navbar {
     color: #cccccc !important; 
     text-decoration: none !important; 
     font-weight: 500;
+    -webkit-text-decoration: none !important;
+    text-decoration: none !important;
 }
 
-.whatsnew-link:hover {
+.whatsnew-link:hover,
+.whatsnew-link:focus,
+.whatsnew-link:active {
     color: #ffffff !important;
     text-decoration: none !important;
+    -webkit-text-decoration: none !important;
+}
+
+.whatsnew-link:visited {
+    color: #cccccc !important;
 }
 
 /* Smooth scrolling */
@@ -519,6 +562,8 @@ html {
 
 /* Pricing Card Styles */
 .pricing-card {
+    background: #5033b0 !important; /* Safari fallback */
+    background: -webkit-linear-gradient(to bottom, #08040f 0%, #150d2e 35%, #5033b0 75%) !important;
     background: linear-gradient(to bottom, #08040f 0%, #150d2e 35%, #5033b0 75%) !important;
     /*border: 1px solid rgba(255, 255, 255, 0.1) !important; */
     -webkit-border-radius: 20px;
@@ -538,6 +583,8 @@ html {
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
     /*border-color: rgba(255, 255, 255, 0.2) !important;*/
+    background: #0a0513 !important; /* Safari fallback */
+    background: -webkit-linear-gradient(to bottom, #0a0513 0%, #5033b0 75%) !important;
     background: linear-gradient(to bottom, #0a0513 0%, #5033b0 75%) !important;
 }
 
@@ -662,13 +709,15 @@ html {
     -webkit-border-radius: 50px !important;
     padding-top: 0.7rem !important;
     padding-bottom: 0.7rem !important;
-    padding-left: 5rem !important;
-    padding-right: 5rem !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
     transition: all 0.3s ease !important;
     -webkit-transition: all 0.3s ease !important;
     text-decoration: none !important;
-    width: 80% !important;
-    display: block !important;
+    width: auto !important;
+    min-width: 200px !important;
+    max-width: 100% !important;
+    display: inline-block !important;
     margin: 0 auto !important;
 }
 
@@ -891,11 +940,15 @@ html {
 
 /* Feedback Box */
 .feedback-box {
-    background-color: rgba(21, 21, 21, 0.1);
+    background-color: rgba(21, 21, 21, 0.8) !important;
+    -webkit-border-radius: 16px;
     border-radius: 16px;
     padding: 30px;
     margin-bottom: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .feedback-title {
