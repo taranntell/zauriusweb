@@ -9,19 +9,84 @@ body {
 
 /* Navigation */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(21, 21, 21, 0.8);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
+    padding: 0.20rem 0;
+    align-items: center;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    align-items: center;
 }
 
 .navbar-brand {
     font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.navbar-brand:hover {
+    color: #ffffff !important;
 }
 
 .nav-link {
     font-weight: 400;
     padding: 0.5rem 1rem !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+}
+
+.nav-link.active {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+/* Purple Pill Button */
+.btn-purple-pill {
+    background: linear-gradient(135deg, #5033b0 0%, #714EF6 100%) !important;
+    border: none !important;
+    color: #ffffff !important;
+    border-radius: 50px !important;
+    padding: 0.15rem 1.5rem !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    display: inline-block !important;
+}
+
+.btn-purple-pill:hover {
+    background: linear-gradient(135deg, #5a3bc4 0%, #8a5ff5 100%) !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(80, 51, 176, 0.3) !important;
+    text-decoration: none !important;
+}
+
+.btn-purple-pill:focus {
+    box-shadow: 0 0 0 0.2rem rgba(80, 51, 176, 0.25) !important;
+    color: #ffffff !important;
+}
+
+.btn-purple-pill.btn-lg {
+    padding: 0.6rem 2.5rem !important;
+    font-size: 1.1rem !important;
+}
+
+/* Add padding to body to account for fixed navbar - only for pages with navbar */
+body.has-navbar {
+    padding-top: 80px;
 }
 
 /* Section Styles */
@@ -45,7 +110,7 @@ body {
     padding: 40px 0;
 }
 
-#buyanddownload {
+#pricing {
     min-height: auto;
 }
 
@@ -117,6 +182,30 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    /* Navigation mobile adjustments */
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+    
+    .navbar-brand img {
+        width: 28px !important;
+        height: 28px !important;
+    }
+    
+    .btn-purple-pill {
+        padding: 0.12rem 1.2rem !important;
+        font-size: 0.9rem !important;
+        margin-top: 0.5rem !important;
+    }
+    
+    .nav-link {
+        padding: 0.75rem 1rem !important;
+    }
+    
+    body.has-navbar {
+        padding-top: 70px;
+    }
+    
     .section-black {
         padding: 60px 0;
         min-height: auto;
@@ -208,31 +297,31 @@ body {
     }
     
     
-    #buyanddownload .lead.fw-bold {
+    #pricing .lead.fw-bold {
         font-size: 0.9rem !important;
     }
     
-    #buyanddownload .fs-2 {
+    #pricing .fs-2 {
         font-size: 1.3rem !important;
     }
     
-    #buyanddownload .fs-5 {
+    #pricing .fs-5 {
         font-size: 1rem !important;
     }
     
-    #buyanddownload .pricing-card {
+    #pricing .pricing-card {
         padding: 30px 20px !important;
     }
     
-    #buyanddownload .price {
+    #pricing .price {
         font-size: 1.7rem !important;
     }
     
-    #buyanddownload .price-period {
+    #pricing .price-period {
         font-size: 0.95rem !important;
     }
     
-    #buyanddownload .feature-item {
+    #pricing .feature-item {
         font-size: 0.9rem !important;
     }
     
@@ -322,6 +411,19 @@ body {
     .whatsnew-card.bg-card-2 {
         display: none;
     }
+
+}
+
+/* Whatsnew Link Styles */
+.whatsnew-link {
+    color: #cccccc !important; 
+    text-decoration: none !important; 
+    font-weight: 500;
+}
+
+.whatsnew-link:hover {
+    color: #ffffff !important;
+    text-decoration: none !important;
 }
 
 /* Smooth scrolling */
@@ -784,6 +886,124 @@ html {
     
     .price {
         font-size: 2.5rem;
+    }
+}
+
+/* Feedback Box */
+.feedback-box {
+    background-color: rgba(21, 21, 21, 0.1);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feedback-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.feedback-text {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.feedback-link {
+    color: #714EF6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.feedback-link:hover {
+    color: #8a5ff5;
+    text-decoration: none;
+}
+
+/* Changelog Styles */
+.changelog-version {
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.version-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+}
+
+.version-title {
+    font-size: 1.8rem;
+    font-weight: 350;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.version-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.change-category {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.change-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.change-list li {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.change-list li::before {
+    content: "•";
+    color: #ffffff;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Mobile adjustments for changelog */
+@media (max-width: 768px) {
+    .changelog-version {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .version-title {
+        font-size: 1.5rem;
+    }
+    
+    .version-subtitle {
+        font-size: 1rem;
+    }
+    
+    .change-category {
+        font-size: 1.1rem;
+        margin-top: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .change-list li {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+        line-height: 1.5;
     }
 }
 

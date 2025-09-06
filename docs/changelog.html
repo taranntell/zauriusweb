@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Changelog — Fallinorg</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="assets/logo.png" as="image">
+
+    <meta name="description" content="Fallinorg Changelog — See the latest features, enhancements, bug fixes and beyond.">
+    <meta property="og:title" content="Fallinorg Changelog — What's New">
+    <meta property="og:description" content="Check out the latest features and updates in Fallinorg. AI-powered file organization for your Mac.">
+    <meta property="og:image" content="https://fallinorg.com/assets/og-image.png">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="assets/apple-touch-icon-167x167.png">
+     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+</head>
+<body class="has-navbar" style="background-color: #1B1B1B;">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/logo.png" alt="Fallinorg logo — Mac file organizer" width="50" height="50" class="me-2">
+                Fallinorg
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="changelog.html">Changelog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-purple-pill ms-2" href="https://buy.stripe.com/aFabJ2ddYbzidWNeH99R600" target="_blank">Get Pre-Sale</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Changelog Section -->
+    <section class="section-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Feedback Box -->
+                    <div class="feedback-box mb-5">
+                        <h3 class="feedback-title">We’d Love Your Feedback</h3>
+                        <p class="feedback-text">Help us make Fallinorg ship the right features and enhancements for the best experience.</p>
+                        <a href="mailto:fallinorg@proton.me" class="feedback-link">Send us your thoughts at fallinorg@proton.me <i class="bi bi-box-arrow-up-right"></i></a>
+                    </div>
+
+                    <div class="mb-5">
+                        <!--<img src="assets/whatsnew-icon.png" alt="Changelog" class="mb-3" style="width: 80px; height: 80px;">-->
+                        <h1 class="display-5 fw-bold">What's New in Fallinorg</h1>
+                        <p class="fs-4 lead">Fallinorg Beta 2.0 introduces new features and enhancements, detailed below.</p>
+                    </div>
+
+                    <!-- Version 2.0 -->
+                    <div class="changelog-version mb-5">
+                        <div class="version-header mb-4">
+                            <h2 class="version-title">Beta 2.0</h2>
+                            <h3 class="version-subtitle">Pre-Sale Release</h3>
+                        </div>
+                        
+                        <div class="version-content">
+                            <h4 class="change-category">New Features</h4>
+                            <ul class="change-list">
+                                <li><strong>Instant classification on Apple Silicon:</strong> Now powered by ONNX Runtime, file classification runs almost instantly compared to the previous 1.2 seconds per file.</li>
+                                <li><strong>Seamless updates:</strong> Over-the-Air (OTA) update support added, so future versions can be installed directly in the app.</li>
+                                <li><strong>Bigger batch processing:</strong> Process up to 150 files at once, tripling the previous 50-file limit.</li>
+                            </ul>
+
+                            <h4 class="change-category">Enhancements</h4>
+                            <ul class="change-list">
+                                <li><strong>Smaller, faster, lighter:</strong> App size reduced by 73%, from 456 MB to just 125 MB. Downloads are quicker, updates smoother, and storage use is minimal.</li>
+                                <li><strong>Smarter text encoding support:</strong> Automatically detects and supports UTF-8, UTF-16, ASCII, Latin-1, Windows CP1252, and macOS Roman for better accuracy.</li>
+                                <li><strong>Cleaner PDF classification:</strong> Identifies meaningful content while ignoring noise such as Acknowledgements, Index pages, or About sections.</li>
+                                <li><strong>Faster startup with caching:</strong> Embeddings are now cached between app sessions, improving performance and reducing loading times.</li>
+                                <li><strong>Sharper language detection:</strong> Improved English detection and better handling of multi-language files to minimize irrelevant content.</li>
+                            </ul>
+
+                            <h4 class="change-category">Bug Fixes</h4>
+                            <ul class="change-list">
+                                <li><strong>More stable performance:</strong> Fixed multiple bugs and crashes, including file path handling issues, for a smoother and more reliable experience.</li>
+                                <li><strong>No file size limits:</strong> Large files are now fully supported, removing the old 10 MB restriction.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Version 1.0 -->
+                    <div class="changelog-version mb-5">
+                        <div class="version-header mb-4">
+                            <h2 class="version-title">Beta 1.0</h2>
+                            <h3 class="version-subtitle">Pre-Sale Release</h3>
+                        </div>
+                        
+                        <div class="version-content">
+                            <h4 class="change-category">New Features</h4>
+                            <ul class="change-list">
+                                <li><strong>Initial release:</strong> Core AI-powered file organization functionality.</li>
+                                <li><strong>Local processing:</strong> All file analysis happens on your Mac, ensuring complete privacy.</li>
+                                <li><strong>Offline operation:</strong> Works without internet connection.</li>
+                                <li><strong>Text and PDF support:</strong> Organize .txt and .pdf files in English.</li>
+                                <li><strong>Custom folder selection:</strong> Choose where your files are organized.</li>
+                            </ul>
+
+                            <h4 class="change-category">Enhancements</h4>
+                            <ul class="change-list">
+                                <li><strong>Apple Silicon optimization:</strong> Built specifically for M-series Macs.</li>
+                                <li><strong>Batch processing:</strong> Process up to 50 files at once.</li>
+                                <li><strong>Smart categorization:</strong> AI understands file content, not just names.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <p class="fs-4 lead mb-3">Ready to try Fallinorg?</p>
+                        <a href="https://buy.stripe.com/aFabJ2ddYbzidWNeH99R600" target="_blank" class="btn btn-purple-pill btn-lg">Get Pre-Sale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
