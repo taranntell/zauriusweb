@@ -630,7 +630,7 @@ html {
     align-items: flex-start;
     margin-bottom: 12px;
     color: rgba(255, 255, 255, 0.9);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .feature-item i {
@@ -763,6 +763,18 @@ html {
     font-weight: bold;
     font-size: 1.1rem;
     flex-shrink: 0;
+}
+
+/* Roadmap text styling */
+.roadmap-text {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Feature card text styling */
+.feature-text {
+    font-size: 1.2rem;
+    color: #ccc;
 }
 
 /* Stacking container */
