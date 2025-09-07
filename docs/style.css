@@ -198,8 +198,8 @@ body.has-navbar {
     .btn-presale {
         padding-left: 2.5rem !important;
         padding-right: 2.5rem !important;
-        width: auto !important;
-        max-width: 90% !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 }
 
@@ -211,6 +211,7 @@ body.has-navbar {
         width: 100% !important;
         max-width: 100% !important;
         font-size: 0.9rem !important;
+        white-space: nowrap !important;
     }
 }
 
@@ -295,6 +296,8 @@ body.has-navbar {
         padding-top: 0.5rem !important;
         padding-bottom: 0.5rem !important;
         font-size: 0.9rem !important;
+        width: 100% !important;
+        white-space: nowrap !important;
     }
     
     
@@ -627,6 +630,7 @@ html {
     align-items: flex-start;
     margin-bottom: 12px;
     color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
 }
 
 .feature-item i {
@@ -636,10 +640,6 @@ html {
     min-width: 20px;
 }
 
-.feature-item span {
-    font-size: 1rem;
-    line-height: 1.5;
-}
 
 .download-section {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -714,11 +714,12 @@ html {
     transition: all 0.3s ease !important;
     -webkit-transition: all 0.3s ease !important;
     text-decoration: none !important;
-    width: auto !important;
-    min-width: 200px !important;
+    width: 100% !important;
     max-width: 100% !important;
-    display: inline-block !important;
+    display: block !important;
     margin: 0 auto !important;
+    text-align: center !important;
+    white-space: nowrap !important;
 }
 
 .btn-presale:hover,
