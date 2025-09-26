@@ -7,6 +7,7 @@ body {
     color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    position: relative;
 }
 
 /* Navigation */
@@ -1070,6 +1071,52 @@ html {
         font-size: 0.9rem;
         margin-bottom: 10px;
         line-height: 1.5;
+    }
+}
+
+/* X (Twitter) Link */
+.x-link {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.x-link:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.x-link i {
+    font-size: 1.2rem;
+}
+
+/* Mobile adjustments for X link */
+@media (max-width: 768px) {
+    .x-link {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .x-link i {
+        font-size: 1.1rem;
     }
 }
 
