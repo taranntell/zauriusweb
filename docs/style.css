@@ -1075,35 +1075,51 @@ html {
 }
 
 /* X (Twitter) Link */
+a.x-link,
 .x-link {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    z-index: 100;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: absolute !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    width: 50px !important;
+    height: 50px !important;
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    -webkit-border-radius: 50% !important;
+    border-radius: 50% !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-align-items: center !important;
+    align-items: center !important;
+    -webkit-justify-content: center !important;
+    justify-content: center !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    -webkit-transition: all 0.3s ease !important;
+    transition: all 0.3s ease !important;
+    z-index: 100 !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    cursor: pointer !important;
 }
 
+a.x-link:hover,
 .x-link:hover {
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #ffffff;
-    text-decoration: none;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 1) !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    -webkit-transform: translateY(-2px) !important;
+    transform: translateY(-2px) !important;
+    -webkit-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
 }
 
+a.x-link i,
 .x-link i {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
+    color: #ffffff !important;
+    display: block !important;
 }
 
 /* Mobile adjustments for X link */
