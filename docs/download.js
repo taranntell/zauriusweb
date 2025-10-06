@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       // Update UI
       statusEl.textContent = "Your payment was verified!";
       downloadLink.href = url;
-      downloadLink.download = "Fallinorg_v1.0.0-beta.zip";
+      downloadLink.download = "Fallinorg-v3.1.0-beta.zip";
       downloadLink.style.display = "inline-block";
       downloadLink.textContent = "Download Fallinorg";
       
