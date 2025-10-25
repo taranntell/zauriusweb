@@ -1,3 +1,43 @@
+/**
+ * FALLINORG WEBSITE TYPOGRAPHY SYSTEM
+ * ====================================
+ *
+ * This stylesheet enforces a consistent 5-tier typography system across all pages.
+ * Use the .type-* classes to maintain visual hierarchy and ensure consistency.
+ *
+ * TYPE CLASSES (Desktop Sizes - Base: type-m = 20px):
+ * ────────────────────────────────────────────────────
+ * .type-xl    60px   Weight: 700  Line-height: 1.2  → Hero titles, main page headers
+ * .type-l     35px   Weight: 600  Line-height: 1.3  → Section headers, emphasis
+ * .type-m     20px   Weight: 400  Line-height: 1.6  → Body copy, paragraphs, feature lists
+ * .type-s     18.75px Weight: 500 Line-height: 1.5  → Subtitles, labels, section intros
+ * .type-xs    15px   Weight: 400  Line-height: 1.4  → Captions, small labels, metadata
+ *
+ * MOBILE BREAKPOINTS (Scaled Proportionally):
+ * ────────────────────────────────────────────
+ * 768px and below:
+ *   .type-xl: 50px   .type-l: 30px   .type-m: 17px   .type-s: 17.5px   .type-xs: 13.5px
+ *
+ * 576px and below:
+ *   .type-xl: 40px   .type-l: 26px   .type-m: 16px   .type-s: 15.5px   .type-xs: 13px
+ *
+ * USAGE GUIDELINES:
+ * ─────────────────
+ * 1. Always use .type-* classes for new content
+ * 2. Avoid mixing Bootstrap typography (fs-*, display-*) with type classes
+ * 3. Do not use !important for typography—use proper CSS cascade
+ * 4. Maintain consistent line-heights (body: 1.6, headings: 1.2-1.5)
+ * 5. Letter-spacing (-0.02em to -0.01em) only for large headlines
+ *
+ * EXAMPLE HTML:
+ * ─────────────
+ * <h1 class="type-xl">Hero Title</h1>
+ * <h2 class="type-l">Section Header</h2>
+ * <p class="type-m">Body paragraph text here...</p>
+ * <h3 class="type-s">Subtitle or Label</h3>
+ * <span class="type-xs">Small caption text</span>
+ */
+
 /* Global Styles */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -18,6 +58,12 @@ body {
     align-items: center;
 }
 
+.navbar.navbar-light {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
 .navbar .container {
     display: flex;
     align-items: center;
@@ -34,8 +80,16 @@ body {
     text-decoration: none;
 }
 
+.navbar.navbar-light .navbar-brand {
+    color: #000000 !important;
+}
+
 .navbar-brand:hover {
     color: #ffffff !important;
+}
+
+.navbar.navbar-light .navbar-brand:hover {
+    color: #000000 !important;
 }
 
 .nav-link {
@@ -45,12 +99,25 @@ body {
     transition: color 0.3s ease;
 }
 
+.navbar.navbar-light .nav-link {
+    color: rgba(0, 0, 0, 0.7) !important;
+}
+
 .nav-link:hover {
     color: #ffffff !important;
 }
 
+.navbar.navbar-light .nav-link:hover {
+    color: #000000 !important;
+}
+
 .nav-link.active {
     color: #ffffff !important;
+    font-weight: 500;
+}
+
+.navbar.navbar-light .nav-link.active {
+    color: #000000 !important;
     font-weight: 500;
 }
 
@@ -111,10 +178,118 @@ body.has-navbar {
     position: relative;
 }
 
+.section-white {
+    background-color: #ffffff;
+    padding: 80px 0;
+    min-height: relative;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #000000;
+}
+
+.section-white h1,
+.section-white h2,
+.section-white h3,
+.section-white h4,
+.section-white h5,
+.section-white h6,
+.section-white p,
+.section-white span {
+    color: #000000;
+}
+
+.section-white .btn-outline-light {
+    border-color: #000000;
+    color: #000000;
+}
+
+.section-white .btn-outline-light:hover {
+    background-color: #000000;
+    border-color: #000000;
+    color: #ffffff;
+}
+
+.section-lightgray {
+    background-color: #F2F2F2;
+    padding: 80px 0;
+    min-height: relative;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #000000;
+}
+
+.section-lightgray h1,
+.section-lightgray h2,
+.section-lightgray h3,
+.section-lightgray h4,
+.section-lightgray h5,
+.section-lightgray h6,
+.section-lightgray p,
+.section-lightgray span {
+    color: #000000;
+}
+
+.section-lightgray .btn-outline-light {
+    border-color: #000000;
+    color: #000000;
+}
+
+.section-lightgray .btn-outline-light:hover {
+    background-color: #000000;
+    border-color: #000000;
+    color: #ffffff;
+}
+
+.section-lightgray .feature-card {
+    background-color: #ffffff;
+}
+
+.section-lightgray .feature-card h4,
+.section-white .feature-card h4 {
+    color: #000000;
+    font-weight: 600;
+}
+
+.section-lightgray .feature-card p,
+.section-white .feature-card p {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.section-lightgray .feature-card h1,
+.section-white .feature-card h1 {
+    color: #000000;
+}
+
+/* Feature card with flexbox layout (text + image) */
+.feature-card.d-flex {
+    padding: 0;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.feature-card.d-flex > div:first-child {
+    padding: 30px;
+}
+
+.feature-card.d-flex img {
+    margin: 0;
+    display: block;
+    margin-top: 30px;
+}
+
 /* Hero section with gradient */
 #hero {
-    background: -webkit-radial-gradient(center top, ellipse, rgb(26, 26, 26) 0%, rgb(20, 20, 20) 30%, rgba(0, 0, 0, 1) 70%);
-    background: radial-gradient(ellipse at center top, rgb(26, 26, 26) 0%, rgb(20, 20, 20) 30%, rgba(0, 0, 0, 1) 70%);
+    background-color: #ffffff;
+    padding: 80px 0;
+    min-height: relative;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 #demo {
@@ -144,16 +319,59 @@ body.has-navbar {
     position: relative;
 }
 
-/* Typography */
+/* Typography System - 5 Type Classes for Consistency */
+
+/* .type-xl: Hero titles, section headers | 60px | Weight: 700 | Line Height: 1.2 */
+.type-xl {
+    font-size: 3.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+/* .type-l: Large text, emphasis | 35px | Weight: 600 | Line Height: 1.3 */
+.type-l {
+    font-size: 2.1875rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+/* .type-m: General paragraph text, body copy | 20px | Weight: 400 | Line Height: 1.6 */
+.type-m {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* .type-s: Subtitles, section intros, labels | 18.75px | Weight: 500 | Line Height: 1.5 */
+.type-s {
+    font-size: 1.171875rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* .type-xs: Captions, small labels | 15px | Weight: 400 | Line Height: 1.4 */
+.type-xs {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* Bootstrap typography overrides using type system */
+/* For maximum consistency, use .type-* classes directly in HTML instead of Bootstrap typography classes */
 .display-3, .display-5 {
     font-weight: 700;
     letter-spacing: -0.02em;
 }
 
 .lead {
-    font-size: 1.25rem;
-    font-weight: 300;
+    font-size: 1rem;
+    font-weight: 400;
     color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    /* NOTE: .lead now maps to .type-m (body copy), not section labels.
+       For section labels, use .type-s class instead */
 }
 
 .btn-light:hover {
@@ -174,6 +392,9 @@ body.has-navbar {
     text-align: left;
     /*border: 1px solid rgba(255, 255, 255, 0.1);*/
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .feature-card:hover {
@@ -214,42 +435,112 @@ body.has-navbar {
     }
 }
 
+/* Typography Mobile Breakpoints - Type Class Variants */
+@media (max-width: 768px) {
+    /* Adjust type classes for tablet/mobile (scaled proportionally from base) */
+    .type-xl {
+        font-size: 3.125rem;
+        /* 50px - scaled from 60px */
+    }
+
+    .type-l {
+        font-size: 1.875rem;
+        /* 30px - scaled from 35px */
+    }
+
+    .type-m {
+        font-size: 1.0625rem;
+        /* 17px - scaled from 20px, with increased line-height for readability */
+        line-height: 1.7;
+    }
+
+    .type-s {
+        font-size: 1.09375rem;
+        /* 17.5px - scaled from 18.75px */
+    }
+
+    .type-xs {
+        font-size: 0.84375rem;
+        /* 13.5px - scaled from 15px */
+    }
+}
+
+@media (max-width: 576px) {
+    /* Extra small screens (scaled proportionally from base) */
+    .type-xl {
+        font-size: 2.5rem;
+        /* 40px - scaled from 60px */
+        line-height: 1.1;
+    }
+
+    .type-l {
+        font-size: 1.625rem;
+        /* 26px - scaled from 35px */
+    }
+
+    .type-m {
+        font-size: 1rem;
+        /* 16px - scaled from 20px */
+        line-height: 1.7;
+    }
+
+    .type-s {
+        font-size: 0.96875rem;
+        /* 15.5px - scaled from 18.75px */
+    }
+
+    .type-xs {
+        font-size: 0.8125rem;
+        /* 13px - scaled from 15px */
+    }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     /* Navigation mobile adjustments */
     .navbar-brand {
         font-size: 1.25rem;
     }
-    
+
     .navbar-brand img {
         width: 28px !important;
         height: 28px !important;
     }
-    
+
     .btn-purple-pill {
         padding: 0.12rem 1.2rem !important;
         font-size: 0.9rem !important;
         margin-top: 0.5rem !important;
     }
-    
+
     .nav-link {
         padding: 0.75rem 1rem !important;
     }
-    
+
     body.has-navbar {
         padding-top: 70px;
     }
-    
+
     .section-black {
         padding: 60px 0;
         min-height: auto;
     }
-    
+
+    .section-white {
+        padding: 60px 0;
+        min-height: auto;
+    }
+
+    .section-lightgray {
+        padding: 60px 0;
+        min-height: auto;
+    }
+
     .section-darker {
         padding: 60px 0;
         min-height: auto;
     }
-    
+
     .section-dark {
         padding: 60px 0;
         min-height: auto;
@@ -533,6 +824,7 @@ html {
 }
 
 .accordion-button {
+    /* Typography: Maps to .type-m (1rem, weight 400) */
     background-color: #1B1B1B;
     color: #ffffff;
     border: none;
@@ -558,6 +850,7 @@ html {
 }
 
 .accordion-body {
+    /* Typography: Maps to .type-m (1rem, weight 400) */
     background-color: #1B1B1B;
     color: rgba(255, 255, 255, 0.9);
 }
@@ -613,9 +906,8 @@ html {
 }
 
 .pricing-description {
+    /* Typography: Maps to .type-m (1rem, line-height 1.6) */
     color: rgba(255, 255, 255, 0.8);
-    font-size: 1rem;
-    line-height: 1.6;
     margin-bottom: 0;
 }
 
@@ -625,11 +917,11 @@ html {
 }
 
 .feature-item {
+    /* Typography: Maps to .type-m (1rem) */
     display: flex;
     align-items: flex-start;
     margin-bottom: 12px;
     color: rgba(255, 255, 255, 0.9);
-    font-size: 1.2rem;
 }
 
 .feature-item i {
@@ -764,17 +1056,11 @@ html {
     flex-shrink: 0;
 }
 
-/* Roadmap text styling */
-.roadmap-text {
-    font-size: 1.2rem;
-    color: #ccc;
-}
+/* Roadmap text styling - DEPRECATED: Use .type-m instead */
+/* .roadmap-text class no longer needed - typography now handled by .type-m */
 
-/* Feature card text styling */
-.feature-text {
-    font-size: 1.2rem;
-    color: #ccc;
-}
+/* Feature card text styling - DEPRECATED: Use .type-m instead */
+/* .feature-text class no longer needed - typography now handled by .type-m */
 
 /* Stacking container */
 .stacking-cards {
@@ -868,8 +1154,8 @@ html {
     flex: 1;
 }
 
-.version-title { font-size: 1.5rem; font-weight: 600; color: #fff; margin-bottom: 5px; }
-.release-date  { font-size: .9rem; color: rgba(255,255,255,.6); margin-bottom: 0; }
+.version-title { color: #fff; margin-bottom: 5px; } /* Maps to .type-l */
+.release-date  { color: rgba(255,255,255,.6); margin-bottom: 0; } /* Maps to .type-xs */
 .card-content  { text-align: left; }
 
 /* Extra small mobile optimizations */
@@ -927,7 +1213,9 @@ html {
     margin-bottom: 8px;
     padding-left: 20px;
     position: relative;
-    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6; /* Maps to .type-m */
 }
 
 .feature-list li::before {
@@ -964,17 +1252,15 @@ html {
 }
 
 .feedback-title {
-    font-size: 1.5rem;
-    font-weight: 600;
+    /* Typography: Maps to .type-l (1.75rem, weight 600) */
     color: #ffffff;
     margin-bottom: 15px;
 }
 
 .feedback-text {
-    font-size: 1rem;
+    /* Typography: Maps to .type-m (1rem, line-height 1.6) */
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 20px;
-    line-height: 1.6;
 }
 
 .feedback-link {
@@ -1001,22 +1287,20 @@ html {
 }
 
 .version-title {
-    font-size: 1.8rem;
-    font-weight: 350;
+    /* Typography: Maps to .type-l (1.75rem, weight 600)
+       Keep custom color/margin, inherit size/weight from type-l class */
     color: #ffffff;
     margin-bottom: 5px;
 }
 
 .version-subtitle {
-    font-size: 1.1rem;
+    /* Typography: Maps to .type-m (1rem, weight 400) */
     color: rgba(255, 255, 255, 0.7);
-    font-weight: 400;
     margin-bottom: 0;
 }
 
 .change-category {
-    font-size: 1.2rem;
-    font-weight: 600;
+    /* Typography: Maps to .type-s (0.9375rem, weight 500) */
     color: #ffffff;
     margin-top: 25px;
     margin-bottom: 15px;
@@ -1033,7 +1317,9 @@ html {
     margin-bottom: 12px;
     padding-left: 20px;
     position: relative;
-    line-height: 1.6;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6; /* Maps to .type-m */
 }
 
 .change-list li::before {
@@ -1105,6 +1391,7 @@ html {
 }
 
 .footer-link {
+    /* Typography: Maps to .type-m (1rem) */
     color: rgba(255, 255, 255, 0.8) !important;
     text-decoration: none !important;
     -webkit-text-decoration: none !important;
@@ -1137,7 +1424,7 @@ html {
 }
 
 .footer-copyright {
-    font-size: 0.9rem !important;
+    /* Typography: Maps to .type-xs (0.75rem) */
     color: rgba(255, 255, 255, 0.6) !important;
     margin-bottom: 0 !important;
 }
