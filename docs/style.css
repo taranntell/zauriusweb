@@ -42,7 +42,8 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    color: white;
+    color: #000000;
+    background-color: #ffffff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     position: relative;
@@ -743,8 +744,8 @@ body.has-navbar {
 
 /* Whatsnew Link Styles */
 .whatsnew-link {
-    color: #cccccc !important; 
-    text-decoration: none !important; 
+    color: #666666 !important;
+    text-decoration: none !important;
     font-weight: 500;
     -webkit-text-decoration: none !important;
     text-decoration: none !important;
@@ -753,13 +754,13 @@ body.has-navbar {
 .whatsnew-link:hover,
 .whatsnew-link:focus,
 .whatsnew-link:active {
-    color: #ffffff !important;
+    color: #000000 !important;
     text-decoration: none !important;
     -webkit-text-decoration: none !important;
 }
 
 .whatsnew-link:visited {
-    color: #cccccc !important;
+    color: #666666 !important;
 }
 
 /* Smooth scrolling */
@@ -820,18 +821,19 @@ html {
 
 /* Minimal FAQ accordion styling */
 .accordion-item {
-    background-color: #1B1B1B;
+    background-color: #F2F2F2;
+    border: none;
 }
 
 .accordion-button {
     /* Typography: Maps to .type-m (1rem, weight 400) */
-    background-color: #1B1B1B;
-    color: #ffffff;
+    background-color: #F2F2F2;
+    color: #000000;
     border: none;
 }
 
 .accordion-button::after {
-    filter: invert(1);
+    filter: brightness(0);
 }
 
 .accordion-button:focus {
@@ -840,27 +842,30 @@ html {
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: #1B1B1B;
-    color: #ffffff;
+    background-color: #E8E8E8;
+    color: #000000;
 }
 
 .accordion-button:not(.collapsed)::after {
-    background-image: none;
-    filter: invert(1);
+    filter: brightness(0);
 }
 
 .accordion-body {
     /* Typography: Maps to .type-m (1rem, weight 400) */
-    background-color: #1B1B1B;
-    color: rgba(255, 255, 255, 0.9);
+    background-color: #F2F2F2;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* Pricing Section - Equal Height Cards */
+#pricing .row > .col-lg-5,
+#pricing .row > .col-md-6 {
+    display: flex;
 }
 
 /* Pricing Card Styles */
 .pricing-card {
-    background: #5033b0 !important; /* Safari fallback */
-    background: -webkit-linear-gradient(to bottom, #08040f 0%, #150d2e 35%, #5033b0 75%) !important;
-    background: linear-gradient(to bottom, #08040f 0%, #150d2e 35%, #5033b0 75%) !important;
-    /*border: 1px solid rgba(255, 255, 255, 0.1) !important; */
+    background: #F2F2F2 !important;
+    border: 1px solid #E0E0E0 !important;
     -webkit-border-radius: 20px;
     border-radius: 20px;
     padding: 40px !important;
@@ -869,22 +874,23 @@ html {
     transition: transform 0.3s ease, border-color 0.3s ease;
     max-width: 500px !important;
     margin: 0 auto !important;
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    height: 100%;
     box-sizing: border-box;
 }
 
 .pricing-card:hover {
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
-    /*border-color: rgba(255, 255, 255, 0.2) !important;*/
-    background: #0a0513 !important; /* Safari fallback */
-    background: -webkit-linear-gradient(to bottom, #0a0513 0%, #5033b0 75%) !important;
-    background: linear-gradient(to bottom, #0a0513 0%, #5033b0 75%) !important;
+    border-color: #CCCCCC !important;
+    background: #FFFFFF !important;
 }
 
 .pricing-header {
     margin-bottom: 30px;
+    flex-shrink: 0;
 }
 
 .price-display {
@@ -894,26 +900,27 @@ html {
 .price {
     font-size: 2rem !important;
     font-weight: 700;
-    color: #ffffff;
+    color: #000000;
     letter-spacing: -0.02em;
 }
 
 .price-period {
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(0, 0, 0, 0.6);
     margin-left: 8px;
     font-weight: 400;
 }
 
 .pricing-description {
     /* Typography: Maps to .type-m (1rem, line-height 1.6) */
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     margin-bottom: 0;
 }
 
 .features-list {
     text-align: left !important;
     margin-bottom: 30px;
+    flex: 1;
 }
 
 .feature-item {
@@ -921,7 +928,7 @@ html {
     display: flex;
     align-items: flex-start;
     margin-bottom: 12px;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 0, 0, 0.9);
 }
 
 .feature-item i {
@@ -933,8 +940,10 @@ html {
 
 
 .download-section {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding-top: 30px;
+    flex-shrink: 0;
+    min-height: 120px;
 }
 
 .email-input-group {
@@ -1075,8 +1084,8 @@ html {
 
 /* Main card: natural height */
 .whatsnew-card.main-card {
-    background-color: #1D1D1F;
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    background-color: #F2F2F2;
+    border: 1px solid #E0E0E0;
     border-radius: 16px;
     padding: 30px;
     box-sizing: border-box;
@@ -1087,7 +1096,7 @@ html {
 
 .whatsnew-card.main-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: #CCCCCC;
 }
 
 /* Background cards: same height as main card, smaller width + offsets */
@@ -1097,8 +1106,8 @@ html {
     height: 100%;            /* match main card height dynamically */
     box-sizing: border-box;
     border-radius: 16px;
-    background-color: #1D1D1F;
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    background-color: #F2F2F2;
+    border: 1px solid #E0E0E0;
     padding: 30px;
     pointer-events: none;
 }
@@ -1154,8 +1163,8 @@ html {
     flex: 1;
 }
 
-.version-title { color: #fff; margin-bottom: 5px; } /* Maps to .type-l */
-.release-date  { color: rgba(255,255,255,.6); margin-bottom: 0; } /* Maps to .type-xs */
+.version-title { color: #000; margin-bottom: 5px; } /* Maps to .type-l */
+.release-date  { color: rgba(0, 0, 0, 0.6); margin-bottom: 0; } /* Maps to .type-xs */
 .card-content  { text-align: left; }
 
 /* Extra small mobile optimizations */
@@ -1209,7 +1218,7 @@ html {
 }
 
 .feature-list li {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 0, 0, 0.9);
     margin-bottom: 8px;
     padding-left: 20px;
     position: relative;
@@ -1240,12 +1249,12 @@ html {
 
 /* Feedback Box */
 .feedback-box {
-    background-color: rgba(21, 21, 21, 0.8) !important;
+    background-color: #F2F2F2 !important;
     -webkit-border-radius: 16px;
     border-radius: 16px;
     padding: 30px;
     margin-bottom: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid #E0E0E0 !important;
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -1253,13 +1262,13 @@ html {
 
 .feedback-title {
     /* Typography: Maps to .type-l (1.75rem, weight 600) */
-    color: #ffffff;
+    color: #000000;
     margin-bottom: 15px;
 }
 
 .feedback-text {
     /* Typography: Maps to .type-m (1rem, line-height 1.6) */
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     margin-bottom: 20px;
 }
 
@@ -1279,29 +1288,32 @@ html {
 .changelog-version {
     padding: 30px;
     margin-bottom: 30px;
+    background-color: #F2F2F2;
+    border-radius: 16px;
+    border: 1px solid #E0E0E0;
 }
 
 .version-header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 20px;
 }
 
 .version-title {
     /* Typography: Maps to .type-l (1.75rem, weight 600)
        Keep custom color/margin, inherit size/weight from type-l class */
-    color: #ffffff;
+    color: #000000;
     margin-bottom: 5px;
 }
 
 .version-subtitle {
     /* Typography: Maps to .type-m (1rem, weight 400) */
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(0, 0, 0, 0.6);
     margin-bottom: 0;
 }
 
 .change-category {
     /* Typography: Maps to .type-s (0.9375rem, weight 500) */
-    color: #ffffff;
+    color: #000000;
     margin-top: 25px;
     margin-bottom: 15px;
 }
@@ -1313,7 +1325,7 @@ html {
 }
 
 .change-list li {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 0, 0, 0.9);
     margin-bottom: 12px;
     padding-left: 20px;
     position: relative;
@@ -1324,7 +1336,7 @@ html {
 
 .change-list li::before {
     content: "•";
-    color: #ffffff;
+    color: #714EF6;
     font-weight: bold;
     position: absolute;
     left: 0;
@@ -1360,43 +1372,54 @@ html {
 
 /* Footer Styles */
 .footer {
-    background-color: #000000 !important;
-    background: #000000 !important;
+    background-color: #F2F2F2 !important;
+    background: #F2F2F2 !important;
     padding: 60px 0 40px 0 !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 .footer-content {
-    text-align: center !important;
+    text-align: left !important;
+}
+
+.footer-newsletter {
+    text-align: left !important;
+}
+
+.footer-newsletter h4 {
+    color: #000000 !important;
 }
 
 .footer-title {
     font-size: 1.8rem !important;
     font-weight: 600 !important;
-    color: #ffffff !important;
+    color: #000000 !important;
     margin-bottom: 15px !important;
 }
 
 .footer-description {
     font-size: 1.1rem !important;
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: rgba(0, 0, 0, 0.7) !important;
     margin-bottom: 30px !important;
     line-height: 1.6 !important;
 }
 
 .footer-links {
     margin-bottom: 30px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
 }
 
 .footer-link {
     /* Typography: Maps to .type-m (1rem) */
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: rgba(0, 0, 0, 0.7) !important;
     text-decoration: none !important;
     -webkit-text-decoration: none !important;
     font-weight: 500 !important;
-    margin: 0 20px !important;
+    margin: 0 !important;
     -webkit-transition: color 0.3s ease !important;
     transition: color 0.3s ease !important;
     display: inline-block !important;
@@ -1405,13 +1428,13 @@ html {
 .footer-link:hover,
 .footer-link:focus,
 .footer-link:active {
-    color: #ffffff !important;
+    color: #000000 !important;
     text-decoration: none !important;
     -webkit-text-decoration: none !important;
 }
 
 .footer-link:visited {
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: rgba(0, 0, 0, 0.7) !important;
 }
 
 .footer-link i {
@@ -1419,14 +1442,17 @@ html {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
     padding-top: 20px !important;
+    margin-top: 20px !important;
+    text-align: left !important;
 }
 
 .footer-copyright {
     /* Typography: Maps to .type-xs (0.75rem) */
-    color: rgba(255, 255, 255, 0.6) !important;
+    color: rgba(0, 0, 0, 0.6) !important;
     margin-bottom: 0 !important;
+    text-align: left !important;
 }
 
 /* Footer mobile adjustments */
@@ -1434,30 +1460,26 @@ html {
     .footer {
         padding: 40px 0 30px 0 !important;
     }
-    
+
     .footer-title {
         font-size: 1.5rem !important;
     }
-    
+
     .footer-description {
         font-size: 1rem !important;
         margin-bottom: 25px !important;
     }
-    
+
     .footer-link {
-        margin: 0 15px !important;
         font-size: 0.95rem !important;
     }
-    
+
     .footer-copyright {
         font-size: 0.85rem !important;
     }
-}
 
-@media (max-width: 576px) {
-    .footer-link {
-        display: block !important;
-        margin: 10px 0 !important;
+    .footer-newsletter {
+        margin-top: 30px !important;
     }
 }
 
