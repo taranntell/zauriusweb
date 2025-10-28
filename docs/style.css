@@ -218,12 +218,13 @@ a.btn-purple-pill,
 
 a.btn-purple-pill:hover,
 .btn.btn-purple-pill:hover {
+  /* nothhing so animage */
     background: var(--color-purple-hover); /* Safari fallback */
     background: -webkit-linear-gradient(135deg, var(--color-purple-hover) 0%, var(--color-purple-light) 100%);
     background: linear-gradient(135deg, var(--color-purple-hover) 0%, var(--color-purple-light) 100%);
     color: var(--color-white);
-    -webkit-transform: translateY(-2px);
-    transform: translateY(-2px);
+    -webkit-transform: translateY(-0.1px);
+    transform: translateY(-0.1px);
     -webkit-box-shadow: var(--shadow-md);
     box-shadow: var(--shadow-md);
     text-decoration: none;
@@ -348,7 +349,10 @@ body.has-navbar {
     padding: 0;
     overflow: hidden;
     flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     align-items: flex-start;
+    -webkit-box-align: start;
 }
 
 .feature-card.d-flex > div:first-child {
@@ -363,21 +367,40 @@ body.has-navbar {
 
 /* Feature card content wrapper */
 .feature-card-content {
-    flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: start;
     justify-content: flex-start;
     width: 100%;
     padding: 30px;
     padding-bottom: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 0;
 }
 
 /* Feature card image styles */
 .feature-card-image {
     width: auto;
+    max-width: 100%;
     height: 130px;
+    max-height: 130px;
+    flex: 0 0 auto;
     flex-shrink: 0;
     padding: 0 30px 30px 30px;
+    display: block;
+    object-fit: contain;
+    -o-object-fit: contain;
+    object-position: left center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    align-self: flex-start;
+    margin-right: auto;
+    margin-top: auto;
 }
 
 /* Green feature card variant */
@@ -388,9 +411,13 @@ body.has-navbar {
 }
 
 .feature-card.d-flex.feature-card-green .feature-card-content {
+    -webkit-box-flex: 1;
     flex: 1;
     display: flex;
     flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: start;
     justify-content: flex-start;
     padding: 30px;
 }
@@ -409,40 +436,16 @@ body.has-navbar {
 }
 
 /* Black feature card variant (privacy card) */
-.feature-card.d-flex.feature-card-black {
+/* Now uses same structure as other feature cards with image at bottom */
+.feature-card.feature-card-black {
     background-color: var(--color-black);
     color: var(--color-white);
-    position: relative;
-    padding: 30px;
-    padding-bottom: 30px;
-    width: 100%;
 }
 
-.feature-card.d-flex.feature-card-black .feature-card-black-icon {
-    position: absolute;
-    top: 50%;
-    right: 0px;
-    transform: translateY(-50%);
-    margin: 0;
-    color: var(--color-white);
-}
-
-.feature-card.d-flex.feature-card-black .feature-card-black-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
-    padding-right: 90px;
-    padding-left: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
+/* Text elements inside black card - keep white color */
 .feature-card.feature-card-black .feature-card-black-text,
 .feature-card.feature-card-black h4.feature-card-black-text,
-.feature-card.feature-card-black p.feature-card-black-text,
-.feature-card.feature-card-black i.feature-card-black-text {
+.feature-card.feature-card-black p.feature-card-black-text {
     color: var(--color-white);
 }
 
@@ -548,20 +551,37 @@ body.has-navbar {
     box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
 }
 
+/* Features section - equal height columns */
+#features .col-lg-4,
+#features .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+
 /* Features */
 .feature-card {
     background-color: #1D1D1F;
+    -webkit-border-radius: 16px;
     border-radius: 16px;
     padding: 30px;
     text-align: left;
     /*border: 1px solid rgba(255, 255, 255, 0.1);*/
+    -webkit-transition: transform 0.3s ease;
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%;
+    flex: 1;
+    -webkit-box-flex: 1;
 }
 
 .feature-card:hover {
+    -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
     /*border-color: rgba(255, 255, 255, 0.2);*/
 }
@@ -577,14 +597,108 @@ body.has-navbar {
     line-height: 1.6;
 }
 
-/* Small window adjustments (between mobile and desktop) */
-@media (max-width: 992px) and (min-width: 769px) {
+/* Tablet adjustments (768px - 992px) */
+@media (max-width: 992px) and (min-width: 768px) {
+    /* Feature cards - better spacing on tablets */
+    #features .feature-card {
+        padding: 25px;
+        margin-bottom: 1rem;
+    }
+
+    /* Feature card content padding */
+    #features .feature-card-content {
+        padding: 25px;
+        padding-bottom: 0;
+    }
+
+    /* Feature card flexbox adjustments */
+    #features .feature-card.d-flex {
+        padding: 0;
+    }
+
+    #features .feature-card.d-flex > div:first-child {
+        padding: 25px;
+    }
+
+    /* Feature card images - consistent height on tablets */
+    #features .feature-card-image {
+        padding: 0 25px 25px 25px;
+        max-width: 300px;
+        width: auto;
+        height: 130px;
+        max-height: 100%;
+        object-fit: contain;
+        -o-object-fit: contain;
+        object-position: left center;
+        align-self: flex-start;
+        margin-right: auto;
+    }
+
+    /* Green feature card adjustments */
+    #features .feature-card.feature-card-green .feature-card-content {
+        padding: 25px;
+    }
+
+    /* Presale button adjustments */
     a.btn-presale,
     .btn.btn-presale {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
         width: 100%;
         max-width: 100%;
+    }
+
+    /* Pricing cards - reduce header size to prevent text wrapping */
+    #pricing .price-display h3.type-m {
+        font-size: 1.171875rem;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    #pricing .price {
+        font-size: 1.75rem;
+    }
+
+    #pricing .price-period {
+        font-size: 0.95rem;
+    }
+
+    #pricing .pricing-header {
+        min-height: 100px;
+    }
+
+    #pricing .pricing-card {
+        padding: 35px 28px;
+    }
+}
+
+/* Small displays - single column cards (below tablet, above mobile) */
+@media (max-width: 767px) and (min-width: 576px) {
+    /* Feature card images - use original size when cards stack to single column */
+    #features .feature-card-image {
+        height: 130px;
+        max-height: 130px;
+        max-width: 300px;
+        padding: 0 30px 30px 30px;
+        object-position: left center;
+        align-self: flex-start;
+        margin-right: auto;
+    }
+
+    /* Green feature card - hide image and make layout match other cards */
+    #features .feature-card-green-image {
+        display: none;
+    }
+
+    #features .feature-card.feature-card-green {
+        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        padding: 30px;
+    }
+
+    #features .feature-card.feature-card-green .feature-card-content {
+        padding: 0;
     }
 }
 
@@ -632,6 +746,56 @@ body.has-navbar {
 }
 
 @media (max-width: 576px) {
+    /* Hero image - mobile adjustments */
+    .hero-image {
+        max-height: 300px;
+    }
+
+    /* Feature cards - reduce padding on very small screens */
+    #features .feature-card {
+        padding: 15px;
+    }
+
+    #features .feature-card-content {
+        padding: 15px;
+        padding-bottom: 0;
+    }
+
+    #features .feature-card.d-flex > div:first-child {
+        padding: 15px;
+    }
+
+    /* Feature card images - keep height large on very small screens for wide icons */
+    /* Reduce margin-top to minimize gap between text and image */
+    #features .feature-card-image {
+        height: 130px;
+        max-height: 130px;
+        max-width: 100%;
+        padding: 0 15px 15px 15px;
+        object-fit: contain;
+        -o-object-fit: contain;
+        object-position: left center;
+        align-self: flex-start;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+
+    /* Green feature card - hide image and make layout match other cards */
+    #features .feature-card-green-image {
+        display: none;
+    }
+
+    #features .feature-card.feature-card-green {
+        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        padding: 15px;
+    }
+
+    #features .feature-card.feature-card-green .feature-card-content {
+        padding: 0;
+    }
+
     /* Extra small screens (scaled proportionally from base) */
     .type-xl {
         font-size: 2.5rem;
@@ -663,6 +827,11 @@ body.has-navbar {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    /* Hero image - tablet adjustments */
+    .hero-image {
+        max-height: 450px;
+    }
+
     /* Navigation mobile adjustments */
     .navbar-brand {
         font-size: 1.25rem;
@@ -790,8 +959,7 @@ body.has-navbar {
         padding: 20px;
         margin-bottom: 0.5rem;
     }
-    
-    
+
     #pricing .lead.fw-bold {
         font-size: 0.9rem;
     }
@@ -819,6 +987,7 @@ body.has-navbar {
     #pricing .feature-item {
         font-size: 0.9rem;
     }
+}
 
     /* FAQ section mobile adjustments */
     #faq .lead.fw-bold {
@@ -865,26 +1034,19 @@ body.has-navbar {
         margin: 0 15px;
     }
 
-
-    
     .whatsnew-card {
         padding: 20px;
     }
-    
+
     .whatsnew-card.main-card {
         padding: 25px 20px;
     }
 
-    
-    .card-header {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-    
+    /* Remove mobile-only card-header overrides - keep horizontal layout */
+
     .whatsnew-icon {
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
     }
 
     .version-title {
@@ -931,10 +1093,20 @@ a.whatsnew-link:visited {
 
 /* Hero image styling */
 .hero-image {
-    height: 675px;
+    height: auto !important;
+    max-height: 675px;
     width: auto;
+    max-width: 100%;
+    display: block;
+    -webkit-border-radius: 8px;
     border-radius: 8px;
     border: 1px solid #cccccc;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 auto;
+    /* Safari-specific image rendering */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
 /* Category selector styles */
@@ -1127,8 +1299,11 @@ html {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     width: 100%;
     height: 100%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -1142,10 +1317,19 @@ html {
 .pricing-header {
     margin-bottom: 30px;
     flex-shrink: 0;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
 }
 
 .price-display {
     margin: 20px 0;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
 }
 
 #pricing .price {
@@ -1171,7 +1355,12 @@ html {
 #pricing .features-list {
     text-align: left;
     margin-bottom: 30px;
+    -webkit-box-flex: 1;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
 }
 
 .feature-item {
@@ -1399,11 +1588,15 @@ a.btn-presale:active,
 .whatsnew-card { box-sizing: border-box; } /* keep */
 
 /* Typography (keep yours, removing the duplicate !important versions helps) */
-.card-header { 
-    margin-bottom: 20px; 
-    text-align: left; 
+.card-header {
+    margin-bottom: 20px;
+    text-align: left;
     display: flex;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     align-items: center;
+    -webkit-box-align: center;
     gap: 15px;
 }
 
@@ -1415,6 +1608,7 @@ a.btn-presale:active,
 }
 
 .header-content {
+    -webkit-box-flex: 1;
     flex: 1;
 }
 
