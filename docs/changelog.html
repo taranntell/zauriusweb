@@ -24,29 +24,31 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
 </head>
-<body class="has-navbar" style="background-color: #1B1B1B;">
+<body class="has-navbar">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="assets/logo.png" alt="Fallinorg logo — Mac file organizer" width="50" height="50" class="me-2">
                 Fallinorg
             </a>
-            
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="changelog.html">Changelog</a>
+                        <a class="nav-link" href="index.html#features">Features</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.html#pricing">Pricing</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-purple-pill ms-2" href="https://buy.stripe.com/aFabJ2ddYbzidWNeH99R600" target="_blank">Get Pre-Sale</a>
+                        <a class="nav-link active" href="changelog.html">Changelog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-purple-pill ms-2" href="https://buy.stripe.com/aFa6oIa1Mave1a16aD9R602" target="_blank">Buy</a>
                     </li>
                 </ul>
             </div>
@@ -54,7 +56,7 @@
     </nav>
 
     <!-- Changelog Section -->
-    <section class="section-dark" style="padding-top: 60px;">
+    <section class="section-white" style="padding-top: 60px;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -67,31 +69,95 @@
 
                     <div class="mb-5">
                         <!--<img src="assets/whatsnew-icon.png" alt="Changelog" class="mb-3" style="width: 80px; height: 80px;">-->
-                        <h1 class="display-5 fw-bold">What's New in Fallinorg</h1>
-                        <p class="fs-4 lead">Fallinorg Beta 3.1.0 introduces new features, enhancements and fixes, detailed below.</p>
+                        <h1 class="type-xl fw-bold">What's New in Fallinorg</h1>
+                        <p class="type-m">Fallinorg 1.0.0 is now officially launched! Built on customer feedback from our beta program.</p>
+                    </div>
+
+                    <!-- Version 1.0.0 -->
+                    <div class="changelog-version mb-5">
+                        <div class="version-header mb-4">
+                            <h2 class="version-title type-l">Version 1.0.0</h2>
+                            <h3 class="version-subtitle type-m">Official Launch</h3>
+                        </div>
+
+                        <div class="version-content">
+                            <p class="mb-4"><strong>We're thrilled to announce the official launch of Fallinorg 1.0.0!</strong> This release brings together all the most-wanted features from our beta program, refined based on your valuable feedback.</p>
+
+                            <h4 class="change-category type-s">Highlights</h4>
+                            <ul class="change-list">
+                                <li><strong>Advanced OCR Support:</strong> Extract and analyze text from images for intelligent classification.</li>
+                                <li><strong>Comprehensive File Format Support:</strong> Full English language support for Microsoft Office (Word, Excel, PowerPoint), PDF, EPUB, Markdown, Text, RTF, CSV, and many more formats.</li>
+                                <li><strong>Quick Look Thumbnails:</strong> Visual previews integrated directly in the app make file recognition faster and more intuitive.</li>
+                                <li><strong>Finder Integration:</strong> Right-click any file in Finder to instantly add it to Fallinorg for classification from anywhere on your Mac.</li>
+                                <li><strong>Privacy First:</strong> All classification happens completely offline on your device. Your sensitive data never leaves your Mac.</li>
+                                <li><strong>Apple Silicon Optimized:</strong> Built exclusively for Apple Silicon to deliver the best AI performance possible.</li>
+                                <li><strong>AI-Powered Understanding:</strong> Uses advanced Sentence Transformers to truly understand file content, not just keywords.</li>
+                                <li><strong>Custom Categories:</strong> Full control to create your own categories and define exactly where files should be moved after classification.</li>
+                            </ul>
+
+                            <h4 class="change-category type-s">Supported File Formats</h4>
+                            <div class="supported-formats mb-3">
+                                <p><strong>Documents:</strong> TXT, PDF, MD (Markdown), RTF, HTML, EPUB, DOC, DOCX</p>
+                                <p><strong>Spreadsheets:</strong> CSV, TSV, XLSX, XLSM, XLTX, XLTM</p>
+                                <p><strong>Presentations:</strong> PPTX, PPTM, POTX, POTM</p>
+                                <p><strong>Data & Config:</strong> JSON, XML, YAML, TOML, INI, CONF, LOG</p>
+                                <p><strong>Images:</strong> PNG, JPG, JPEG, HEIC, HEIF, TIFF, TIF, BMP, WEBP</p>
+                            </div>
+
+                            <p class="mt-4"><em>Thank you to all our beta testers who helped shape Fallinorg into what it is today. This is just the beginning!</em></p>
+                        </div>
+                    </div>
+
+                    <!-- Version 3.2.0 -->
+                    <div class="changelog-version mb-5">
+                        <div class="version-header mb-4">
+                            <h2 class="version-title type-l">Beta 3.2.0</h2>
+                            <h3 class="version-subtitle type-m">Pre-Sale Release</h3>
+                        </div>
+
+                        <div class="version-content">
+                            <h4 class="change-category type-s">New Features</h4>
+                            <ul class="change-list">
+                                <li><strong>OCR Support:</strong> Classify images using optical character recognition to extract and analyze text from image files.</li>
+                                <li><strong>Microsoft Office Support:</strong> Added support for Word, Excel, and PowerPoint documents, making it easier to organize your office files.</li>
+                                <li><strong>Quick Look Thumbnails:</strong> Integration of macOS Quick Look provides visual thumbnails directly in the app, making file recognition faster and more intuitive.</li>
+                                <li><strong>Enhanced Classification Control:</strong> View the top 5 best classification matches for each file, with a plus button to easily choose alternative destinations.</li>
+                            </ul>
+
+                            <h4 class="change-category type-s">Enhancements</h4>
+                            <ul class="change-list">
+                                <li><strong>Improved Add Category UX:</strong> Small user experience improvements to the "Add new category" feature for smoother workflow.</li>
+                                <li><strong>Faster Classification:</strong> Performance improvements deliver quicker file classification results.</li>
+                            </ul>
+
+                            <h4 class="change-category type-s">Bug Fixes</h4>
+                            <ul class="change-list">
+                                <li><strong>Batch Processing Stability:</strong> Fixed parsing errors that occurred when loading hundreds of files at once.</li>
+                            </ul>
+                        </div>
                     </div>
 
                     <!-- Version 3.1.0 -->
                     <div class="changelog-version mb-5">
                         <div class="version-header mb-4">
-                            <h2 class="version-title">Beta 3.1.0</h2>
-                            <h3 class="version-subtitle">Pre-Sale Release</h3>
+                            <h2 class="version-title type-l">Beta 3.1.0</h2>
+                            <h3 class="version-subtitle type-m">Pre-Sale Release</h3>
                         </div>
                         
                         <div class="version-content">
-                            <h4 class="change-category">New Features</h4>
+                            <h4 class="change-category type-s">New Features</h4>
                             <ul class="change-list">
                                 <li><strong>EPUB Support:</strong> Added support for EPUB files, bringing total supported formats to 15.</li>
                                 <li><strong>TSV Support:</strong> Added support for Tab-Separated Values (TSV) files for better data file organization.</li>
                                 <li><strong>Finder Integration:</strong> Right-click files anywhere on your Mac and choose 'Organize with Fallinorg' from the context menu to instantly organize them.</li>
                             </ul>
 
-                            <h4 class="change-category">Enhancements</h4>
+                            <h4 class="change-category type-s">Enhancements</h4>
                             <ul class="change-list">
                                 <li><strong>Improved HTML Parsing:</strong> Better handling of large HTML files for more accurate classification and faster processing.</li>
                             </ul>
 
-                            <h4 class="change-category">Bug Fixes</h4>
+                            <h4 class="change-category type-s">Bug Fixes</h4>
                             <ul class="change-list">
                                 <li><strong>General Stability:</strong> Various small fixes and improvements for better reliability.</li>
                             </ul>
@@ -101,12 +167,12 @@
                     <!-- Version 3.0 -->
                     <div class="changelog-version mb-5">
                         <div class="version-header mb-4">
-                            <h2 class="version-title">Beta 3.0</h2>
-                            <h3 class="version-subtitle">Pre-Sale Release</h3>
+                            <h2 class="version-title type-l">Beta 3.0</h2>
+                            <h3 class="version-subtitle type-m">Pre-Sale Release</h3>
                         </div>
-                        
+
                         <div class="version-content">
-                            <h4 class="change-category">New Features</h4>
+                            <h4 class="change-category type-s">New Features</h4>
                             <ul class="change-list">
                                 <li><strong>Custom Categories:</strong> Create your own categories and edit the built-in ones to fit your needs.</li>
                                 <li><strong>Category Templates:</strong> Quickly add ready-made category sets without starting from scratch.</li>
@@ -115,13 +181,13 @@
                                 <li><strong>Top-5 Matches:</strong> See the five best category suggestions for each file, making manual re-sorting easier.</li>
                             </ul>
 
-                            <h4 class="change-category">Enhancements</h4>
+                            <h4 class="change-category type-s">Enhancements</h4>
                             <ul class="change-list">
                                 <li><strong>Faster Performance:</strong> Reduced delays when loading cached data and processing large batches.</li>
                                 <li><strong>Refined Interface:</strong> Updated settings page and small UI improvements across the app for a cleaner experience.</li>
                             </ul>
 
-                            <h4 class="change-category">Bug Fixes</h4>
+                            <h4 class="change-category type-s">Bug Fixes</h4>
                             <ul class="change-list">
                                 <li><strong>General Stability:</strong> Fixed various issues and minor slowdowns to keep classification reliable and smooth.</li>
                             </ul>
@@ -131,19 +197,19 @@
                     <!-- Version 2.0 -->
                     <div class="changelog-version mb-5">
                         <div class="version-header mb-4">
-                            <h2 class="version-title">Beta 2.0</h2>
-                            <h3 class="version-subtitle">Pre-Sale Release</h3>
+                            <h2 class="version-title type-l">Beta 2.0</h2>
+                            <h3 class="version-subtitle type-m">Pre-Sale Release</h3>
                         </div>
-                        
+
                         <div class="version-content">
-                            <h4 class="change-category">New Features</h4>
+                            <h4 class="change-category type-s">New Features</h4>
                             <ul class="change-list">
                                 <li><strong>Instant classification on Apple Silicon:</strong> Now powered by ONNX Runtime, file classification runs almost instantly compared to the previous 1.2 seconds per file.</li>
                                 <li><strong>Seamless updates:</strong> Over-the-Air (OTA) update support added, so future versions can be installed directly in the app.</li>
                                 <li><strong>Bigger batch processing:</strong> Process up to 150 files at once, tripling the previous 50-file limit.</li>
                             </ul>
 
-                            <h4 class="change-category">Enhancements</h4>
+                            <h4 class="change-category type-s">Enhancements</h4>
                             <ul class="change-list">
                                 <li><strong>Smaller, faster, lighter:</strong> App size reduced by 73%, from 456 MB to just 125 MB. Downloads are quicker, updates smoother, and storage use is minimal.</li>
                                 <li><strong>Smarter text encoding support:</strong> Automatically detects and supports UTF-8, UTF-16, ASCII, Latin-1, Windows CP1252, and macOS Roman for better accuracy.</li>
@@ -152,7 +218,7 @@
                                 <li><strong>Sharper language detection:</strong> Improved English detection and better handling of multi-language files to minimize irrelevant content.</li>
                             </ul>
 
-                            <h4 class="change-category">Bug Fixes</h4>
+                            <h4 class="change-category type-s">Bug Fixes</h4>
                             <ul class="change-list">
                                 <li><strong>More stable performance:</strong> Fixed multiple bugs and crashes, including file path handling issues, for a smoother and more reliable experience.</li>
                                 <li><strong>No file size limits:</strong> Large files are now fully supported, removing the old 10 MB restriction.</li>
@@ -163,12 +229,12 @@
                     <!-- Version 1.0 -->
                     <div class="changelog-version mb-5">
                         <div class="version-header mb-4">
-                            <h2 class="version-title">Beta 1.0</h2>
-                            <h3 class="version-subtitle">Pre-Sale Release</h3>
+                            <h2 class="version-title type-l">Beta 1.0</h2>
+                            <h3 class="version-subtitle type-m">Pre-Sale Release</h3>
                         </div>
-                        
+
                         <div class="version-content">
-                            <h4 class="change-category">New Features</h4>
+                            <h4 class="change-category type-s">New Features</h4>
                             <ul class="change-list">
                                 <li><strong>Initial release:</strong> Core AI-powered file organization functionality.</li>
                                 <li><strong>Local processing:</strong> All file analysis happens on your Mac, ensuring complete privacy.</li>
@@ -177,7 +243,7 @@
                                 <li><strong>Custom folder selection:</strong> Choose where your files are organized.</li>
                             </ul>
 
-                            <h4 class="change-category">Enhancements</h4>
+                            <h4 class="change-category type-s">Enhancements</h4>
                             <ul class="change-list">
                                 <li><strong>Apple Silicon optimization:</strong> Built specifically for M-series Macs.</li>
                                 <li><strong>Batch processing:</strong> Process up to 50 files at once.</li>
@@ -188,15 +254,63 @@
                 </div>
             </div>
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <p class="fs-4 lead mb-3">Ready to try Fallinorg?</p>
-                        <a href="https://buy.stripe.com/aFabJ2ddYbzidWNeH99R600" target="_blank" class="btn btn-purple-pill btn-lg">Get Pre-Sale</a>
+            <div class="row justify-content-center text-center mb-3">
+                <div class="col-lg-8">
+                    <img src="assets/logo.png" alt="Fallinorg logo" class="mb-4 logo-medium">
+                    <h2 class="type-l fw-bold">Fallinorg Pro</h2>
+                    <p class="type-m mb-1">Available for $29.49 USD one-time.</p>
+                    <div class="container">
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-lg-8 text-center">
+                                <a href="https://buy.stripe.com/aFa6oIa1Mave1a16aD9R602" target="_blank" class="btn btn-purple-pill btn-lg">Buy</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Left Side: Footer Links -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="footer-content">
+                        <div class="footer-links text-start">
+                            <a href="mailto:fallinorg@proton.me" class="footer-link">
+                                <i class="bi bi-envelope me-2"></i>Contact
+                            </a>
+                            <a href="changelog.html" class="footer-link">
+                                <i class="bi bi-journal-text me-2"></i>Changelog
+                            </a>
+                            <a href="https://x.com/fallinorg" class="footer-link" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-twitter-x me-2"></i>
+                            </a>
+                        </div>
+
+                        <div class="footer-bottom">
+                            <p class="footer-copyright type-xs">Copyright © 2025. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Newsletter Subscription -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="footer-newsletter text-start">
+                        <h4 class="type-s mb-3">Subscribe to our newsletter</h4>
+                        <form action="https://formspree.io/f/mrblyvnk" method="POST" class="newsletter-form">
+                            <div class="input-group mb-3">
+                                <input type="email" name="email" class="form-control form-control-md" placeholder="Enter your email address" required>
+                                <button type="submit" class="btn btn-dark btn-md">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>

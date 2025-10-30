@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fallinorg — Clean up your Mac in one click.</title>
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#ffffff">
     <meta name="description" content="Fallinorg — AI-powered file organization for your Mac. Organize files instantly in one click, fully offline, and with complete privacy.">
     <meta property="og:title" content="Fallinorg — Clean up your Mac in one click.">
     <meta property="og:description" content="AI-powered file organization for your Mac. Fast, private, offline.">
@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preload" href="assets/logo.png" as="image">
-    <link rel="preload" href="assets/demo.mp4" as="video">
     <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
     <!-- Apple Touch Icons -->
@@ -33,122 +32,250 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
 </head>
-<body>
-    <!-- Hero Section -->
-    <section id="hero" class="section-black">
-        <div class="container mb-5" >
-            <div class="row justify-content-center text-center mt-4">
-                    <div class="col-lg-8 mt-5">
-                        <img src="assets/logo.png" alt="Fallinorg logo for Mac cleanup app" class="img-fluid mb-2 mt-5" style="width: 200px; height: 200px;">
-                        <h1 class="fw-bold mb-4">Fallinorg</h1>
-                        <h2 class="display-5 fw-bold">Clean up your Mac in one click.</h2>
-                    </div>
+<body class="has-navbar">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                Fallinorg
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="changelog.html">Changelog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-purple-pill ms-2" href="https://buy.stripe.com/aFa6oIa1Mave1a16aD9R602" target="_blank">Buy</a>
+                    </li>
+                </ul>
             </div>
-            <div class="row justify-content-center text-center mt-2">
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section-white">
+        <div class="container mb-5" >
+            <div class="row justify-content-center text-center">
+                <div class="col-xl-12">
+                    <h1 class="type-xl fw-bold">Clean up your Mac in one click. <br/>Fast. Offline. Private.</h1>
+                </div>
+                <div class="row justify-content-center text-center mt-5">
                     <div class="col-lg-10">
-                        <p class="fs-2 mb-4">Your files, perfectly organized.<br/>Fast, offline, private.</p> 
-                    
-                        <a type="button" class="btn btn-outline-light rounded-pill btn-lg mb-5" href="#pricing">
-                                <i class="bi bi-apple me-2"></i>Get Pre-Sale
-                        </a>
-                        <video src="assets/demo.mp4" controls preload="metadata" class="demo-video mt-4" onloadedmetadata="this.currentTime = 0"></video>
+                        <picture>
+                            <source media="(max-width: 987px)" srcset="assets/hero_smalldisplays.webp">
+                            <img src="assets/hero.webp" alt="Fallinorg app interface preview" class="img-fluid hero-image">
+                        </picture>
                     </div>
+                </div>
+                <div class="row justify-content-center text-center mt-5">
+                    <div class="col-lg-8">
+                        <p class="type-m">Fallinorg automatically organizes your Mac with private, on-device AI that understands your content. Customize your workflow, preview files instantly, and stay organized without the effort — so you can focus on what matters.</p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-lg-8 text-center">
+                            <a href="https://buy.stripe.com/aFa6oIa1Mave1a16aD9R602" target="_blank" class="btn btn-purple-pill btn-lg">Buy</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="section-black">
+    <section id="features" class="section-lightgray">
         <div class="container">
-            <div class="row justify-content-center text-center mb-5">
+            <div class="row justify-content-center text-center mb-3">
                 <div class="col-lg-8">
-                    <h3 class="lead fw-bold mb-4 ">FEATURES</h3>
-                    <h2 class="display-5 fw-bold">Built to help you focus.</h2>
-                    <p class="fs-4 lead mb-1">Unlike other tools, Fallinorg sorts your files using local AI to understand what your files are about, not just their names.</p>
-                    <!--fw-bold-->
+                    <h3 class="type-s fw-bold mb-4">FEATURES</h3>
+                    <h2 class="type-xl fw-bold">Built to help you focus.</h2>
+                    <p class="type-m mb-1">Unlike other tools, Fallinorg organizes your files with local AI that understands what they are — not just what they’re called.</p>
                 </div>
             </div>
-            
+
+            <!-- Demo Video -->
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-xl-10 col-lg-12 col-md-12">
+                    <video src="assets/demo.mp4" controls preload="metadata" class="demo-video mt-4" onloadedmetadata="this.currentTime = 0"></video>
+                </div>
+            </div>
+
             <!-- First row: 2 features -->
             <div class="row justify-content-center mb-1">
-                <div class="col-lg-4 col-md-4 mb-4">
-                    <div class="feature-card">
-                        <h1><i class="bi bi-file-lock-fill"></i></h1>
-                        <h4 class="mb-3">Local, Private & Offline</h4>
-                        <p class="feature-text">Made for Apple Silicon. All file processing happens locally. No uploads, no cloud — your data stays safe and never leaves your device.</p> 
+                <!-- OCR support -->
+                <div class="col-xxl-4 col-xl-5 col-md-6 mb-4">
+                    <div class="feature-card d-flex align-items-start flex-column">
+                        <div class="feature-card-content">
+                            <h4 class="type-s mb-3">See Beyond the Image</h4>
+                            <p class="type-s">Fallinorg uses on-device intelligence and Optical Character Recognition to extract meaning from your images — classifying them instantly and with precision.</p>
+                        </div>
+                        <img src="assets/fileicon_visionimage.webp" alt="Fallinorg OCR - Vision Image Recognition" class="img-fluid feature-card-image">
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 mb-4">
-                    <div class="feature-card">
-                        <h1><i class="bi bi-sliders2"></i></h1>
-                        <h4 class="mb-3">Custom Categories & Templates</h4>
-                        <p class="feature-text">Create, rename or edit categories to match your workflow. Add ready-made templates for quick setup and stay in control of your file organization.</p>
+                <!-- Multi File Support support -->
+                <div class="col-xxl-4 col-xl-5 col-md-6 mb-4">
+                    <div class="feature-card d-flex align-items-start flex-column">
+                        <div class="feature-card-content">
+                            <h4 class="type-s mb-3">Multi-Format Support</h4>
+                            <p class="type-s">From Word, Excel, and PowerPoint to PDFs, eBooks, and more — Fallinorg understands your documents and knows where they belong.</p>
+                        </div>
+                        <img src="assets/fileicon_multifiles.webp" alt="Multiple File Support. From A to Z" class="img-fluid feature-card-image">
                    </div>
                 </div>
             </div>
-            
+
             <!-- Second row: 1 feature centered -->
             <div class="row justify-content-center mb-1">
-                <div class="col-lg-8 col-md-8 mb-4">
+                <div class="col-xxl-8 col-xl-10 col-md-12 mb-4">
+                    <!-- green color #CAE4CA; #E0BEE6 rosa #DF9AB8 -->
+                    <div class="feature-card d-flex align-items-start">
+                        <div class="feature-card-content">
+                            <h4 class="type-s mb-3 feature-card-green-text">Full Control</h4>
+                            <p class="type-s feature-card-green-text">Create, rename, and refine categories to match your workflow. Use built-in templates for a quick start and stay fully in charge of your organization.</p>
+                        </div>
+                        <img src="assets/feature-categories.webp" alt="Custom Categories & Templates feature" class="img-fluid feature-card-green-image">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Third row: 1 feature centered -->
+            <div class="row justify-content-center mb-1">
+                <div class="col-xxl-8 col-xl-10 col-md-12 mb-4">
                     <div class="feature-card">
-                        <h1><i class="bi bi-stack"></i></h1>
-                        <h4 class="mb-3">Multiple File Types</h4>
-                        <p class="feature-text">15 File types supported in English.<br/>PDF, EPUB, Markdown, Text, Rich Text (RTF), HTML, CSV, JSON, XML, YAML, TOML, INI, TSV (and more).</p>
+                        <h4 class="type-s mb-3">Finds the Right Place for Everything</h4>
+                        <p class="type-s">Fallinorg automatically chooses the best destination for each file. And if it’s not quite right, you can pick from smart suggestions with a single click.</p>
+                        <!-- Use case -->
+                        <div class="mt-4">
+                            <div class="d-flex align-items-center mb-2 category-path-container">
+                                <span class="type-s category-path-label">~/Any Folder/Unsorted.file</span>
+                                <span class="type-s category-path-arrow">→ <span id="selectedCategory" class="category-path-arrow">Tax</span></span>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 category-buttons-container">
+                                <div class="category-button active" data-category="Tax">
+                                    <span class="category-button-circle"></span>
+                                    <span class="category-button-text">Tax</span>
+                                </div>
+                                <div class="category-button" data-category="Work & Projects">
+                                    <span class="category-button-text">Work & Projects</span>
+                                </div>
+                                <div class="category-button" data-category="Family">
+                                    <span class="category-button-text">Family</span>
+                                </div>
+                                <div class="category-button" data-category="Shopping & Purchase">
+                                    <span class="category-button-text">Shopping & Purchase</span>
+                                </div>
+                                <div class="category-button" data-category="Vacation">
+                                    <span class="category-button-text">Vacation</span>
+                                </div>
+                                <div id="plusButton" class="category-plus-button">
+                                    <i class="bi bi-plus category-plus-icon"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             
             <!-- Third row: 2 features -->
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-4">
-                    <div class="feature-card">
-                        <h1  ><i class="bi bi-stars"></i></h1>
-                        <h4 class="mb-3">Smart Suggestions:<br/>Top 5 Matches</h4>
-                        <p class="feature-text">If the app doesn't pick the right folder, choose from the five best matches.</p>
+            <div class="row justify-content-center mb-1">
+                <!-- OCR support -->
+                <div class="col-xxl-4 col-xl-5 col-md-6 mb-4">
+                    <div class="feature-card d-flex align-items-start flex-column">
+                        <div class="feature-card-content">
+                            <h4 class="type-s mb-3">Supercharged </h4>
+                            <p class="type-s">Quick Look and Finder integrations make organizing faster, clearer, and seamlessly natural.</p>
+                        </div>
+                        <img src="assets/fileicon_quicklook.webp" alt="Easy File Recognition - Quick Look and Finder Integration" class="img-fluid feature-card-image">
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="feature-card">
-                        <h1><i class="bi bi-eye-fill"></i></h1>
-                        <h4 class="mb-3">Your Mac, Supercharged</h4>
-                        <p class="feature-text">Quick Look previews and Finder integration make managing your files efortless, faster and smoother.</p>
-                    </div>
+                <!-- Multi File Support support -->
+                <div class="col-xxl-4 col-xl-5 col-md-6 mb-4">
+                    <div class="feature-card feature-card-black d-flex align-items-start flex-column">
+                        <div class="feature-card-content">
+                            <h4 class="type-s mb-3 feature-card-black-text">Local, Private & Offline</h4>
+                            <p class="type-s feature-card-black-text">Built for Apple Silicon. All processing happens locally — fully offline. No uploads, no cloud. Your data always stays on your Mac.</p>
+                        </div>
+                        <img src="assets/fileicon_privacy.webp" alt="Local, private, offline" class="img-fluid feature-card-image">
+                   </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Buy and Download Section -->
-    <section id="pricing" class="section-black">
+    <!-- Pricing Section -->
+    <section id="pricing" class="section-white">
         <div class="container">
+            <div class="row justify-content-center text-center mb-3">
+                <div class="col-lg-8">
+                    <h3 class="type-s fw-bold mb-4">TRY IT FOR FREE</h3>
+                    <h2 class="type-xl fw-bold">Pricing</h2>
+                    <p class="type-m mb-5">Free and one-time licenses — no subscriptions, no hidden fees.</p>
+                </div>
+            </div>
+
             <div class="row justify-content-center">
-                <div class="col-lg-5 col-md-6">
-                    <h3 class="lead fw-bold mb-4 text-center">DOWNLOAD</h3>
+                <!-- Free Plan -->
+                <div class="col-xl-4 col-lg-5 col-md-6 mb-4">
                     <div class="pricing-card">
                         <div class="pricing-header">
-                        <div class="price-display">
-                            <h3 class="fs-2 fw-bold mb-2">Fallinorg Pre-Sale</h3>
-                            <span class="price">$9.49</span>
-                            <span class="price-period">USD one-time</span>
+                            <div class="price-display">
+                                <h3 class="type-m fw-bold mb-2">Fallinorg Free</h3>
+                                <span class="price">$0</span>
+                                <span class="price-period">Free</span>
+                            </div>
                         </div>
-                        <p class="pricing-description fs-5">
-                            AI-powered file organization for your Mac. Organize your files with content analysis—all while keeping your data private and secure.
-                        </p>
+
+                        <div class="features-list">
+                            <span><div class="feature-item type-xs"><i class="bi bi-check-circle-fill" style="color:#7F7F7F;"></i> Handle up to 50 files per month in English</div></span>
+                            <span><div class="feature-item type-xs"><i class="bi bi-check-circle-fill"></i> Supports images, Word, Excel, PowerPoint, PDF, EPUB, RTF, and more. (30+ file types supported)</div></span>
+                            <span><div class="feature-item type-xs"><i class="bi bi-check-circle-fill"></i> Customize and organize your own files classification</div></span>
+                            <span><div class="feature-item type-xs"><i class="bi bi-check-circle-fill"></i> Support and optimized for Mac Silicon</div></span>
+                            <span><div class="feature-item type-xs"><i class="bi bi-check-circle-fill"></i> Fully private and offline</div></span>
+                        </div>
+                        <p class="small mt-2 pricing-text-dark">No credit card required.</p>
+                        <div class="download-section">
+                            <a type="button" class="btn btn-presale btn-lg" href="https://pub-658a89365e67426ba4ef7a54fe246bdd.r2.dev/Fallinorg-v1.0.0-demo.zip">Download Free</a> 
+                        </div>
                     </div>
-        
-                    <div class="features-list">
-                        <span><div class="feature-item"><i class="bi bi-check-circle-fill"></i> Handle unlimited files, no restrictions</div></span>
-                        <span><div class="feature-item"><i class="bi bi-check-circle-fill"></i> Choose where organized files are saved</div></span>
-                        <span><div class="feature-item"><i class="bi bi-check-circle-fill"></i> Supports 15 file types in English including PDF, EPUB, Markdown, Text, RTF, HTML, CSV, JSON, XML, YAML, TOML, INI, TSV and configuration files</div></span>
-                        <span><div class="feature-item"><i class="bi bi-check-circle-fill"></i> Create and edit custom categories or use ready-made templates</div></span>
-                        <span><div class="feature-item"><i class="bi bi-check-circle-fill"></i> Instant Quick Look previews to check content before sorting</div></span>
-                        <span><div class="feature-item"><i class="bi bi-check-circle-fill"></i> Made and optimized for Apple Silicon for fast, smooth performance</div></span>
-                        <span><div class="feature-item"><i class="bi bi-check-circle-fill"></i> Email support included</div></span>
-                    </div>
-        
-                    <div class="download-section">
-                        <a type="button" class="btn btn-presale btn-lg mb-3" href="https://buy.stripe.com/aFabJ2ddYbzidWNeH99R600">Get Pre-Sale</a>
-                        <p class="small mt-2" style="color: #000">You'll be securely redirected to the download page after purchase.</p>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="col-xl-4 col-lg-5 col-md-6 mb-4">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <div class="price-display">
+                                <h3 class="type-m fw-bold mb-2">Fallinorg Pro</h3>
+                                <span class="price">$29.49</span>
+                                <span class="price-period">USD one-time</span>
+                            </div>
+                        </div>
+
+                        <div class="features-list">
+                            <span><div class="feature-item type-xs"><i class="bi bi-check-circle-fill"></i> Handle unlimited files in English</div></span>
+                            <span><div class="feature-item type-xs"><i class="bi bi-check-circle-fill"></i> Supports images, Word, Excel, PowerPoint, PDF, EPUB, RTF, and more. (30+ file types supported)</div></span>
+                            <span><div class="feature-item type-xs"><i class="bi bi-check-circle-fill"></i> Customize and organize your own files classification</div></span>
+                            <span><div class="feature-item type-xs"><i class="bi bi-check-circle-fill"></i> Support and optimized for Mac Silicon</div></span>
+                            <span><div class="feature-item type-xs"><i class="bi bi-check-circle-fill"></i> Fully private and offline</div></span>
+                        </div>
+                        <p class="small mt-2 pricing-text-dark">You'll be securely redirected to the download page after purchase.</p>
+
+
+                        <div class="download-section">
+                            <a type="button" class="btn btn-presale btn-lg" href="https://buy.stripe.com/aFa6oIa1Mave1a16aD9R602">Get Pro</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -156,33 +283,34 @@
     </section>
 
     <!-- What's New -->
-    <section id="whatsnew" class="section-black">
+    <section id="whatsnew" class="section-white">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-
                     <div class="text-center mb-5">
-                        <h3 class="lead fw-bold mb-4 ">UPDATES</h3>
-                        <h2 class="display-5 fw-bold">What's New in Fallinorg</h2>
-                        <p class="fs-4 lead mb-1">The latest features, fixes, and enhancements in Fallinorg.</p>
+                        <h3 class="type-s fw-bold mb-4">UPDATES</h3>
+                        <h2 class="type-xl fw-bold">What's New in Fallinorg</h2>
+                        <p class="type-m mb-1">The latest features, fixes, and enhancements in Fallinorg.</p>
                     </div>
-
                     <div class="stacking-cards">
                         <!-- Main card (front) -->
                         <div class="whatsnew-card main-card">
                             <div class="card-header">
                                 <img src="assets/whatsnew-icon.png" alt="Fallinorg what's new logo" class="whatsnew-icon">
                                 <div class="header-content">
-                                    <h4 class="version-title">Latest Release</h4>
-                                    <h5 >Beta 3.1.0</h5>
-                                    <p class="release-date">Pre-Sale Release</p>
+                                    <h4 class="version-title fw-bold type-m">Latest Release</h4>
+                                    <h5 class="type-m">Version 1.0.0</h5>
+                                    <p class="release-date type-xs">Official Launch</p>
                                 </div>
                             </div>
                             <div class="card-content mb-4">
                                 <div class="features-list">
-                                    <div class="feature-item"><i class="bi bi-check-circle-fill"></i><span>New File Types: Added support for EPUB and TSV files, bringing total supported formats to 15.</span></div>
-                                    <div class="feature-item"><i class="bi bi-check-circle-fill"></i><span>Finder Integration: Right-click files anywhere on your Mac and choose 'Organize with Fallinorg' from the menu to instantly organize them.</span></div>
-                                    <div class="feature-item"><i class="bi bi-check-circle-fill"></i><span>Improved HTML Parsing: Better handling of large HTML files for more accurate classification.</span></div>
+                                    <div class="feature-item type-xs"><i class="bi bi-check-circle-fill"></i><span><strong>Organize images</strong> by reading their content, not just file names.</span></div>
+                                    <div class="feature-item type-xs"><i class="bi bi-check-circle-fill"></i><span><strong>Supports 30+ file types</strong>: Microsoft Office, PDFs, EPUBs, Markdown, Text, RTF, CSV, images, and more.</span></div>
+                                    <div class="feature-item type-xs"><i class="bi bi-check-circle-fill"></i><span><strong>File thumbnails</strong> help you recognize files faster before organizing.</span></div>
+                                    <div class="feature-item type-xs"><i class="bi bi-check-circle-fill"></i><span><strong>Create custom categories</strong> that match your workflow.</span></div>
+                                    <div class="feature-item type-xs"><i class="bi bi-check-circle-fill"></i><span><strong>Fast classification</strong> keeps you moving without waiting.</span></div>
+                                    <div class="feature-item type-xs"><i class="bi bi-check-circle-fill"></i><span><strong>Fully offline.</strong> All processing stays on your Mac; your data never leaves your device.</span></div>
                                </div>
                             </div>
                         </div>
@@ -200,133 +328,94 @@
             </div>
         </div>
     </section>
-
-    <!-- Roadmap -->
-    <section id="roadmap" class="section-black py-5">
-        <div class="container text-center mb-5">
-        <h3 class="lead fw-bold mb-4">ROADMAP</h3>
-        <h2 class="display-5 fw-bold">Your Pre-Sale Journey</h2>
-        <p class="fs-4 lead mb-3">Early supporters unlock every step — updates, value, and savings.<br>Pre-sale buyers are guaranteed an exclusive discount at the official release.</p>
-
-        <a type="button" class="btn btn-outline-light rounded-pill btn-lg mb-5" href="#pricing">
-            <i class="bi bi-apple me-2"></i>Get Pre-Sale
-        </a>
-
-        <div class="row">
-            <!-- Step 1 -->
-            <div class="col-12 col-md-6 col-lg text-start">
-            <div class="mb-3"><i class="bi bi-rocket-takeoff" style="font-size: 46px; color:#ffffff;"></i></div>
-            <h4>1. First Release <span class="badge rounded-pill text-bg-secondary">Pre-Sale</span></h4>
-            <p class="roadmap-text">Start organizing your files today with core AI features. Fully private. Works offline. Fast by design.</p>
-            </div>
-    
-            <!-- Step 2 --> 
-            <div class="col-12 col-md-6 col-lg text-start">
-            <div class="mb-3"><i class="bi bi-stars" style="font-size: 46px; color:#ffffff;"></i></div>
-            <h4>2. Beta Updates <span class="badge rounded-pill text-bg-secondary">Pre-Sale</span></h4>
-            
-            <p class="roadmap-text">Shaped by your feedback. Smarter classification, better files handling, and performance upgrades.</p>
-            </div>
-        
-            <!-- Step 3 -->
-            <div class="col-12 col-md-6 col-lg text-start">
-            <div class="mb-3"><i class="bi bi-lightning-charge" style="font-size: 46px; color:#ffffff;"></i></div>
-            <h4>3. Official Release 1.0</h4>
-            <p class="roadmap-text">Support for new file types, expanded language coverage, and powerful new features.</p>
-            </div>
-    
-            <!-- Step 5 -->
-            <div class="col-12 col-md-6 col-lg text-start">
-            <div class="mb-3"><i class="bi bi-infinity" style="font-size: 46px; color:#ffffff;"></i></div>
-            <h4>∞ Beyond 1.0</h4>
-            <p class="roadmap-text">Smarter. Private. Effortless.</p>
-            </div>
-        </div>
-        </div>
-    </section>
   
     <!-- FAQ -->
-    <section id="faq" class="section-dark">
+    <section id="faq" class="section-lightgray">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <h3 class="lead fw-bold mb-4">SUPPORT</h3>
-                    <h2 class="display-5 fw-bold mb-4">Frequently Asked Questions</h2>
-                    <p class="fs-4 lead mb-1">Here are answers to the most common questions about Fallinorg.</p>
+                    <h3 class="type-s fw-bold mb-4">SUPPORT</h3>
+                    <h2 class="type-l fw-bold mb-4">FAQ</h2>
 
-                    <div class="accordion accordion-flush" id="accordionFAQ" aria-label="FAQ" data-bs-theme="dark">
+                    <div class="accordion accordion-flush" id="accordionFAQ" aria-label="FAQ" data-bs-theme="light">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <button class="accordion-button type-xs" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     How does Fallinorg analyze my files?
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
-                                <div class="accordion-body">
-                                    Fallinorg uses Sentence Transformers AI to understand your file content locally on your Mac. It then classifies, suggests and sorts files into meaningful folders based on their content.
+                                <div class="accordion-body type-xs">
+                                    Fallinorg uses Sentence Transformers AI to understand your file content locally on your Mac. It then classifies, suggests and sorts files into meaningful folders based on available categories and their content.
                                 </div>
                             </div>
                         </div>
                         
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <button class="accordion-button type-xs collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     Is my data private and secure?
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
-                                <div class="accordion-body">
+                                <div class="accordion-body type-xs">
                                     Absolutely. All processing happens on your device. Your files never leave your Mac, and no data is sent to any external servers.
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <button class="accordion-button type-xs collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                     What file types are supported?
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
-                                <div class="accordion-body">
-                                    Fallinorg supports 15 file types including Text, PDF, EPUB, Markdown, Rich Text (RTF), HTML, LOG, CSV, JSON, XML, YAML, TOML, INI, TSV, and configuration files. All processing happens locally on your Mac.
+                                <div class="accordion-body type-xs">
+                                    Fallinorg supports 30+ file types including:<br/><br/>
+                                    <strong>Documents:</strong> TXT, PDF, MD (Markdown), RTF, HTML, EPUB, DOC, DOCX<br/>
+                                    <strong>Spreadsheets:</strong> CSV, TSV, XLSX, XLSM, XLTX, XLTM<br/>
+                                    <strong>Presentations:</strong> PPTX, PPTM, POTX, POTM<br/>
+                                    <strong>Data & Config:</strong> JSON, XML, YAML, TOML, INI, CONF, LOG<br/>
+                                    <strong>Images:</strong> PNG, JPG, JPEG, HEIC, HEIF, TIFF, TIF, BMP, WEBP<br/><br/>
+                                    All processing happens locally on your Mac with OCR support for images.
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <button class="accordion-button type-xs collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                     Can I choose where files are organized?
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionFAQ">
-                                <div class="accordion-body">
-                                    Yes, you have full control. You can select the destination folders and decide which files to move or keep.
+                                <div class="accordion-body type-xs">
+                                    Yes, you have full control. You can create custom categories that match your workflow, select destination folders, and decide which files to move or keep. Fallinorg also shows you the top 5 classification matches for each file, so you can easily choose alternative destinations.
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <button class="accordion-button type-xs collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                                     Do I need internet to use Fallinorg?
                                 </button>
                             </h2>
                             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionFAQ">
-                                <div class="accordion-body">
+                                <div class="accordion-body type-xs">
                                     No, internet is not required. Fallinorg works completely offline with all AI processing happening locally.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingSix">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                <button class="accordion-button type-xs collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                                     Will it work on my Intel Mac?
                                 </button>
                             </h2>
                             <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionFAQ">
-                                <div class="accordion-body">
+                                <div class="accordion-body type-xs">
                                     Not yet. Fallinorg currently supports only Apple Silicon Macs. If you want to be notified when Intel support is available, please email us at fallinorg@proton.me.
                                 </div>
                             </div>
@@ -334,14 +423,14 @@
 
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingM1">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseM1" aria-expanded="false" aria-controls="collapseM1">
+                              <button class="accordion-button type-xs collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseM1" aria-expanded="false" aria-controls="collapseM1">
                                 Why does Fallinorg classify files differently on M1 Macs?
                               </button>
                             </h2>
                             <div id="collapseM1" class="accordion-collapse collapse" aria-labelledby="headingM1" data-bs-parent="#accordionFAQ">
-                              <div class="accordion-body">
+                              <div class="accordion-body type-xs">
                                 Fallinorg runs on all Apple Silicon Macs. Older M1 Macs may have slightly broader file categories due to hardware limits, but everything remains private and local. Newer Macs (M2+) enjoy faster, more precise classification.<br/>
-                          
+
                                 Why? M1 chips have fewer neural cores and less memory bandwidth than newer Apple Silicon, which can slightly affect how AI analyzes files.
                               </div>
                             </div>
@@ -349,28 +438,28 @@
 
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingSeven">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                   How can I get a refund? 
+                                <button class="accordion-button type-xs collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                   How can I get a refund?
                                 </button>
                             </h2>
                             <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionFAQ">
-                                <div class="accordion-body">
-                                    Email us at  <a href="mailto:fallinorg@proton.me" class="text-light">fallinorg@proton.me</a> with your refund request and reason. We’ll be happy to assist you.
+                                <div class="accordion-body type-xs">
+                                    Email us at  <a href="mailto:fallinorg@proton.me" class="text-dark">fallinorg@proton.me</a> with your refund request and reason. We'll be happy to assist you.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingEight">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                <button class="accordion-button type-xs collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
                                    Will I get updates after buying the pre-sale?
                                 </button>
                             </h2>
                             <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionFAQ">
-                                <div class="accordion-body">
-                                    Yes, during the pre-sale period, you’ll receive all small updates we release—this includes bug fixes, performance improvements, and minor feature tweaks. These updates are free for all pre-sale buyers.
+                                <div class="accordion-body type-xs">
+                                    Yes, during the pre-sale period, you'll receive all small updates we release—this includes bug fixes, performance improvements, and minor feature tweaks. These updates are free for all pre-sale buyers.
 
-                                    Once the pre-sale ends, we’ll begin developing larger features and major upgrades. These will be part of the full release, and pre-sale buyers will have the option to upgrade at a special discounted price.
-                                    
+                                    Once the pre-sale ends, we'll begin developing larger features and major upgrades. These will be part of the full release, and pre-sale buyers will have the option to upgrade at a special discounted price.
+
                                     By joining early, you get to enjoy the app right away, help shape its development with your feedback, and secure early access at our lowest price.
                                 </div>
                             </div>
@@ -381,25 +470,21 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="newsletter" class="section-dark">
+    <!-- Buyme -->
+    <section id="buyme" class="section-white">
         <div class="container">
-            <div class="row justify-content-center text-center">
+            <div class="row justify-content-center text-center mb-3">
                 <div class="col-lg-8">
-
-                    <h2 class="display-6 mb-1 fw-bold">Subscribe to our newsletter</h2>
-                    <p class="lead mb-4">Carefully curated emails to keep you in the loop.</p>
-                     
-                     <form action="https://formspree.io/f/mrblyvnk" method="POST" class="newsletter-form">
-                         <div class="row justify-content-center">
-                             <div class="col-lg-6">
-                                 <div class="input-group mb-3">
-                                     <input type="email" name="email" class="form-control form-control-md" placeholder="Enter your email address" required>
-                                     <button type="submit" class="btn btn-light btn-md">Subscribe</button>
-                                 </div>
-                             </div>
-                         </div>
-                     </form>
+                    <img src="assets/logo.png" alt="Fallinorg logo" class="mb-4 logo-medium">
+                    <h2 class="type-l fw-bold">Fallinorg Pro</h2>
+                    <p class="type-m mb-1">Available for $29.49 USD one-time.</p>
+                    <div class="container">
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-lg-8 text-center">
+                                <a href="https://buy.stripe.com/aFa6oIa1Mave1a16aD9R602" target="_blank" class="btn btn-purple-pill btn-lg">Buy</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -408,10 +493,11 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-8">
+            <div class="row">
+                <!-- Left Side: Footer Links -->
+                <div class="col-lg-6 col-md-6">
                     <div class="footer-content">
-                        <div class="footer-links">
+                        <div class="footer-links text-start">
                             <a href="mailto:fallinorg@proton.me" class="footer-link">
                                 <i class="bi bi-envelope me-2"></i>Contact
                             </a>
@@ -422,10 +508,23 @@
                                 <i class="bi bi-twitter-x me-2"></i>
                             </a>
                         </div>
-                        
+
                         <div class="footer-bottom">
-                            <p class="footer-copyright">Copyright © 2025. All rights reserved.</p>
+                            <p class="footer-copyright type-xs">Copyright © 2025. All rights reserved.</p>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Newsletter Subscription -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="footer-newsletter text-start">
+                        <h4 class="type-s mb-3">Subscribe to our newsletter</h4>
+                        <form action="https://formspree.io/f/mrblyvnk" method="POST" class="newsletter-form">
+                            <div class="input-group mb-3">
+                                <input type="email" name="email" class="form-control form-control-md" placeholder="Enter your email address" required>
+                                <button type="submit" class="btn btn-dark btn-md">Subscribe</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -433,68 +532,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
-    <!-- Whats new stacking cards -->
-    <script>
-        function syncCardHeights() {
-          const mainCard = document.querySelector('.main-card');
-          const bg1 = document.querySelector('.bg-card-1');
-          const bg2 = document.querySelector('.bg-card-2');
-          
-          if (mainCard && bg1 && bg2) {
-            const height = mainCard.offsetHeight; // dynamic height
-            bg1.style.height = height + 'px';
-            bg2.style.height = height + 'px';
-          }
-        }
-      
-        window.addEventListener('load', syncCardHeights);
-        window.addEventListener('resize', syncCardHeights);
-    </script>
-    
-    <script>
-        // Email validation and download button functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const emailInput = document.getElementById('emailInput');
-            const downloadBtn = document.getElementById('downloadBtn');
-            const invalidFeedback = document.querySelector('.invalid-feedback');
-            
-            if (!emailInput || !downloadBtn || !invalidFeedback) {
-                console.warn('Email validation skipped: required elements not found.');
-                return; // stop execution
-            }
-
-            // Email validation regex
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            
-            function validateEmail() {
-                const email = emailInput.value.trim();
-                const isValid = emailRegex.test(email);
-                
-                if (email === '') {
-                    // Empty field - reset state
-                    emailInput.classList.remove('is-invalid');
-                    downloadBtn.disabled = true;
-                    invalidFeedback.style.display = 'none';
-                } else if (isValid) {
-                    // Valid email
-                    emailInput.classList.remove('is-invalid');
-                    downloadBtn.disabled = false;
-                    invalidFeedback.style.display = 'none';
-                } else {
-                    // Invalid email
-                    emailInput.classList.add('is-invalid');
-                    downloadBtn.disabled = true;
-                    invalidFeedback.style.display = 'block';
-                }
-            }
-            
-            // Real-time validation
-            emailInput.addEventListener('input', validateEmail);
-            emailInput.addEventListener('blur', validateEmail);
-            
-        });
-    </script>
+    <script src="js/main.js" defer></script>
 
 </body>
 </html>
