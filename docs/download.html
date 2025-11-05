@@ -1,50 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fallinorg Download</title>
-  <meta name="theme-color" content="#ffffff">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Changelog — Fallinorg</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="assets/logo.png" as="image">
 
-  <!-- Apple Touch Icons -->
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="assets/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180x180.png">
-  <link rel="apple-touch-icon" sizes="167x167" href="assets/apple-touch-icon-167x167.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-
-  <script src="js/download.js"></script>
+    <meta name="description" content="Fallinorg Changelog — See the latest features, enhancements, bug fixes and beyond.">
+    <meta property="og:title" content="Fallinorg Changelog — What's New">
+    <meta property="og:description" content="Check out the latest features and updates in Fallinorg. AI-powered file organization for your Mac.">
+    <meta property="og:image" content="https://fallinorg.com/assets/og-image.png">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="assets/apple-touch-icon-167x167.png">
+     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
 </head>
-<body class="section-white">
-  <div class="container">
-    <div class="row justify-content-center text-center">
-      <div class="col-lg-6">
-        <img src="assets/logo.png" alt="Fallinorg logo" class="img-fluid mb-2 mt-5 logo-medium">
-        <h2 class="type-l fw-bold mb-4">Fallinorg Pro</h2>
-        <h1 class="type-xl fw-bold mb-4">Thank you for your purchase!</h1>
-        <p class="type-m mb-4">Please keep this window open until your download starts!</p>
-        <div id="loading-spinner" class="mb-4">
-          <div class="spinner-border text-dark" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
+<body class="has-navbar">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                Floxtop
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="btn btn-purple-pill ms-2" href="https://floxtop.com">Visit Floxtop</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <p id="status" class="type-m mb-4">Verifying your payment...</p>
-        <a id="download-link" href="#" class="btn btn-purple-pill btn-lg" style="display:none;">
-          <i class="bi bi-download me-2"></i>Download Fallinorg
-        </a>
-        <div id="home-link" style="display:none;" class="mt-4">
-          <a href="index.html" class="btn btn-dark">
-            <i class="bi bi-house me-2"></i>Go back home
-          </a>
+    </nav>
+
+    <!-- Rebranding Banner -->
+    <section class="section-white" style="padding: 20px 0; border-bottom: 1px solid #f0f0f0;">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <p class="type-m mb-2"><strong>Fallinorg has been rebranded to Floxtop!</strong></p>
+                    <p class="type-s text-muted mb-3">We've evolved with a new name and fresh identity. Latest updates can be found on our new website.</p>
+                    <a href="https://floxtop.com" target="_blank" class="btn btn-sm btn-purple-pill">Explore Floxtop</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="footer-content text-center">
+                        <p class="type-xs mb-3">
+                            © 2025 Floxtop. All rights reserved. |
+                            <a href="https://floxtop.com" class="text-decoration-none" style="color: #774CFF;" target="_blank">Visit Floxtop</a> |
+                            <a href="mailto:floxtop@proton.me" class="text-decoration-none" style="color:#774CFF;">Contact</a>
+                        </p>
+                        <p class="type-xs text-muted">Formerly known as Fallinorg</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
